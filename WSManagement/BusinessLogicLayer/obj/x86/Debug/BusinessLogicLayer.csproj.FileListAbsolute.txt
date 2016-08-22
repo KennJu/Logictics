@@ -43,3 +43,13 @@ D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogic
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb

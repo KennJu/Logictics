@@ -161,11 +161,11 @@ namespace WSManagement
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 DefaultSetting(true); 
-                Library.Message("Đã cập nhật dữ liệu của nhân viên.", "Cảnh Báo");
+                Library.Message("Đã cập nhật dữ liệu của nhân viên.", "Thông Báo - "+this.Text);
             }
             else 
             {
-                Library.Message("Không thể cập nhật dữ liệu.\nVui lòng kiểm tra lại thông tin", "Cảnh Báo");
+                Library.Message("Không thể cập nhật dữ liệu.\nVui lòng kiểm tra lại thông tin", "Cảnh Báo - "+ this.Text);
                 return; 
             }     
         }

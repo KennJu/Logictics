@@ -27,3 +27,9 @@ D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferO
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
