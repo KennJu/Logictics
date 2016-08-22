@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panelTop = new DevExpress.XtraEditors.PanelControl();
+            this.template1 = new WSManagement.Template();
             this.panelRight = new DevExpress.XtraEditors.PanelControl();
             this.panelFill = new DevExpress.XtraEditors.PanelControl();
             this.gridMaster = new DevExpress.XtraGrid.GridControl();
             this.gridDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).BeginInit();
+            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).BeginInit();
             this.panelFill.SuspendLayout();
@@ -43,27 +45,35 @@
             // 
             // panelTop
             // 
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Controls.Add(this.template1);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelTop.Location = new System.Drawing.Point(791, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(971, 131);
+            this.panelTop.Size = new System.Drawing.Size(180, 515);
             this.panelTop.TabIndex = 0;
+            // 
+            // template1
+            // 
+            this.template1.Location = new System.Drawing.Point(6, 12);
+            this.template1.Name = "template1";
+            this.template1.Size = new System.Drawing.Size(180, 393);
+            this.template1.TabIndex = 0;
             // 
             // panelRight
             // 
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(796, 131);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRight.Location = new System.Drawing.Point(0, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(175, 384);
+            this.panelRight.Size = new System.Drawing.Size(791, 182);
             this.panelRight.TabIndex = 0;
             // 
             // panelFill
             // 
             this.panelFill.Controls.Add(this.gridMaster);
             this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(0, 131);
+            this.panelFill.Location = new System.Drawing.Point(0, 182);
             this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(796, 384);
+            this.panelFill.Size = new System.Drawing.Size(791, 333);
             this.panelFill.TabIndex = 1;
             // 
             // gridMaster
@@ -73,7 +83,7 @@
             this.gridMaster.Location = new System.Drawing.Point(2, 2);
             this.gridMaster.MainView = this.gridDetail;
             this.gridMaster.Name = "gridMaster";
-            this.gridMaster.Size = new System.Drawing.Size(792, 380);
+            this.gridMaster.Size = new System.Drawing.Size(787, 329);
             this.gridMaster.TabIndex = 0;
             this.gridMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridDetail});
@@ -95,7 +105,9 @@
             this.Name = "frmSupplier";
             this.Text = "Nhà Cung Cấp";
             this.Load += new System.EventHandler(this.frmSupplier_Load);
+            this.ParentChanged += new System.EventHandler(this.frmSupplier_ParentChanged);
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).EndInit();
+            this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).EndInit();
             this.panelFill.ResumeLayout(false);
@@ -112,5 +124,6 @@
         private DevExpress.XtraEditors.PanelControl panelFill;
         private DevExpress.XtraGrid.GridControl gridMaster;
         private DevExpress.XtraGrid.Views.Grid.GridView gridDetail;
+        private Template template1;
     }
 }

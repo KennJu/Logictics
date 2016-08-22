@@ -29,6 +29,12 @@ namespace WSManagement
             gridDetail.OptionsView.ShowAutoFilterRow = true;
             gridDetail.OptionsView.ColumnAutoWidth = false;
             gridDetail.BestFitColumns();
+            
+        }
+
+        private void frmSupplier_ParentChanged(object sender, EventArgs e)
+        {
+            Library.Message("Thêm", "Thông Báo - " + this.Text);
         }
     }
 }

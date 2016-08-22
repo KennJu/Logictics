@@ -296,5 +296,10 @@ namespace WSManagement
         {
             this.Close();
         }
+
+        private void ViewDetail_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }
