@@ -29,12 +29,12 @@ namespace WSManagement
                 logicEmploy = new EmployeeLogic();
                 infoEmploy = new EmployeeData();             
                 gridControl1.DataSource = logicEmploy.GetAllEmployee();
-                gridView1.Columns[0].Visible = false;
-                gridView1.Columns[1].Caption = "Mã Nhân Viên";
-                gridView1.Columns[2].Visible = true;
-                gridView1.Columns[2].Caption = "Tên Nhân Viên";
-                gridView1.OptionsView.ShowAutoFilterRow = true;
-                gridView1.OptionsView.ColumnAutoWidth = false;
+                //gridView1.Columns[0].Visible = false;
+                //gridView1.Columns[1].Caption = "Mã Nhân Viên";
+                //gridView1.Columns[2].Visible = true;
+                //gridView1.Columns[2].Caption = "Tên Nhân Viên";
+                //gridView1.OptionsView.ShowAutoFilterRow = true;
+                //gridView1.OptionsView.ColumnAutoWidth = false;
                 gridView1.BestFitColumns();
                 //txtNo_.DataBindings.Add("Text", elogic.GetAllEmployee(), "No_");
                 //txtFirstName.DataBindings.Add("Text", elogic.GetAllEmployee(), "FirstName");
@@ -99,6 +99,7 @@ namespace WSManagement
             {
                 TypeConmand = 0;
                 btnAdd.Text = "&Thêm";
+                ResetControl();
                 DefaultSetting(true);
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
@@ -160,14 +161,10 @@ namespace WSManagement
                 btnAdd.Text = "&Thêm";
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
+                btnEdit.Enabled = true; 
                 DefaultSetting(true); 
-                Library.Message("Đã cập nhật dữ liệu của nhân viên.", "Thông Báo - "+this.Text);
+                Library.Message("Đã cập nhật dữ liệu của nhân viên.", "Thông Báo - " + this.Text);
             }
-            else 
-            {
-                Library.Message("Không thể cập nhật dữ liệu.\nVui lòng kiểm tra lại thông tin", "Cảnh Báo - "+ this.Text);
-                return; 
-            }     
         }
         public void FillControlToDT()
         {
@@ -188,6 +185,7 @@ namespace WSManagement
           //
             infoEmploy.BirthDate=Convert.ToDateTime(deNgaysinh.EditValue);
             infoEmploy.PlaceOfBirth=txtNoiCap.Text.Trim();
+            infoEmploy.City= "";
             infoEmploy.Address=txtAddress.Text.Trim();
             infoEmploy.JobTitle= lookUpChucVu.EditValue.ToString();
             infoEmploy.Department=lookUpPhongBan.EditValue.ToString();
@@ -204,7 +202,8 @@ namespace WSManagement
             {
                 infoEmploy.MaritalStatus = "Độc thân";
             } 
-                infoEmploy.CreateDate=Convert.ToDateTime(deNgayVaoLam.EditValue);
+            infoEmploy.CreateDate=Convert.ToDateTime(deNgayVaoLam.EditValue);
+            infoEmploy.Fax = "";
             infoEmploy.Login = frmLogin.Login;
             infoEmploy.MaritalStatus=""; 
             infoEmploy.HireDate=DateTime.Now;

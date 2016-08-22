@@ -63,7 +63,7 @@ namespace DataAccessLayer
          
         public int Insert(EmployeeData _employee)
         {
-            SqlParameter[] SQLParameters = {    new SqlParameter("RowID", SqlDbType.VarChar, 250) ,
+            SqlParameter[] SQLParameters = {    //new SqlParameter("RowID", SqlDbType.VarChar, 250) ,
                                                 new SqlParameter("No_", SqlDbType.VarChar, 250) ,
                                                 new SqlParameter("No_2", SqlDbType.VarChar, 250) ,
                                                 new SqlParameter("LastName", SqlDbType.VarChar, 250) ,
@@ -88,30 +88,30 @@ namespace DataAccessLayer
                                                 new SqlParameter("MarialStatus", SqlDbType.VarChar, 250) ,
                                                 new SqlParameter("HireDate", SqlDbType.DateTime, 11) ,
                                                 new SqlParameter("Status", SqlDbType.Int, 18) };
-            SQLParameters[0].Direction = ParameterDirection.Output;
-            SQLParameters[1].Value = _employee.No_;
-            SQLParameters[2].Value = _employee.No_2;
-            SQLParameters[3].Value = _employee.LastName;
-            SQLParameters[4].Value = _employee.FirstName;
-            SQLParameters[5].Value = _employee.FullName;
-            SQLParameters[6].Value = _employee.Gender;
-            SQLParameters[7].Value = _employee.BirthDate;            
-            SQLParameters[8].Value = _employee.PlaceOfBirth;
-            SQLParameters[9].Value = _employee.Address;
-            SQLParameters[10].Value = _employee.City;
-            SQLParameters[11].Value = _employee.JobTitle;
-            SQLParameters[12].Value = _employee.Department;
-            SQLParameters[13].Value = _employee.IDCard;
-            SQLParameters[14].Value = _employee.DateOfIssue;
-            SQLParameters[15].Value = _employee.PlaceOfIssue;
-            SQLParameters[16].Value = _employee.Phone;
-            SQLParameters[17].Value = _employee.Fax;
-            SQLParameters[18].Value = _employee.Email;
-            SQLParameters[19].Value = _employee.CreateDate;
-            SQLParameters[20].Value = _employee.Login;
-            SQLParameters[21].Value = _employee.MaritalStatus;
-            SQLParameters[22].Value = _employee.HireDate;
-            SQLParameters[23].Value = _employee.Status;  
+            //SQLParameters[0].Direction = ParameterDirection.Output;
+            SQLParameters[0].Value = _employee.No_;
+            SQLParameters[1].Value = _employee.No_2;
+            SQLParameters[2].Value = _employee.LastName;
+            SQLParameters[3].Value = _employee.FirstName;
+            SQLParameters[4].Value = _employee.FullName;
+            SQLParameters[5].Value = _employee.Gender;
+            SQLParameters[6].Value = _employee.BirthDate;            
+            SQLParameters[7].Value = _employee.PlaceOfBirth;
+            SQLParameters[8].Value = _employee.Address;
+            SQLParameters[9].Value = _employee.City;
+            SQLParameters[10].Value = _employee.JobTitle;
+            SQLParameters[11].Value = _employee.Department;
+            SQLParameters[12].Value = _employee.IDCard;
+            SQLParameters[13].Value = _employee.DateOfIssue;
+            SQLParameters[14].Value = _employee.PlaceOfIssue;
+            SQLParameters[15].Value = _employee.Phone;
+            SQLParameters[16].Value = _employee.Fax;
+            SQLParameters[17].Value = _employee.Email;
+            SQLParameters[18].Value = _employee.CreateDate;
+            SQLParameters[19].Value = _employee.Login;
+            SQLParameters[20].Value = _employee.MaritalStatus;
+            SQLParameters[21].Value = _employee.HireDate;
+            SQLParameters[22].Value = _employee.Status;  
 
             int newId = clsDatabase.InsertData("Employee_Insert", SQLParameters);
             _employee.RowID= newId;
@@ -175,8 +175,9 @@ namespace DataAccessLayer
                 _employee.RowID = newId;
                 return newId;
             }
-            catch
-            { 
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo");
                 return 0;               
             }
             

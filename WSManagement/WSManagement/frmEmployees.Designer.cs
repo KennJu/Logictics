@@ -614,6 +614,7 @@
             // 
             // lookUpQuoctich
             // 
+            this.lookUpQuoctich.EnterMoveNextControl = true;
             this.lookUpQuoctich.Location = new System.Drawing.Point(266, 60);
             this.lookUpQuoctich.Name = "lookUpQuoctich";
             this.lookUpQuoctich.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -785,8 +786,8 @@
             // 
             // radCogiadinh
             // 
-            this.radCogiadinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.radCogiadinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radCogiadinh.AutoSize = true;
             this.radCogiadinh.BackColor = System.Drawing.Color.Transparent;
             this.radCogiadinh.Location = new System.Drawing.Point(89, 3);
@@ -811,6 +812,7 @@
             // 
             // txtNoisinh
             // 
+            this.txtNoisinh.EnterMoveNextControl = true;
             this.txtNoisinh.Location = new System.Drawing.Point(747, 36);
             this.txtNoisinh.Name = "txtNoisinh";
             this.txtNoisinh.Size = new System.Drawing.Size(91, 20);
@@ -820,6 +822,7 @@
             // deNgaysinh
             // 
             this.deNgaysinh.EditValue = null;
+            this.deNgaysinh.EnterMoveNextControl = true;
             this.deNgaysinh.Location = new System.Drawing.Point(503, 36);
             this.deNgaysinh.Name = "deNgaysinh";
             this.deNgaysinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -835,6 +838,7 @@
             // 
             // txtFirstName
             // 
+            this.txtFirstName.EnterMoveNextControl = true;
             this.txtFirstName.Location = new System.Drawing.Point(503, 12);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 20);
@@ -843,6 +847,7 @@
             // 
             // txtLastName
             // 
+            this.txtLastName.EnterMoveNextControl = true;
             this.txtLastName.Location = new System.Drawing.Point(747, 12);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(91, 20);
@@ -851,6 +856,7 @@
             // 
             // txtNo_
             // 
+            this.txtNo_.EnterMoveNextControl = true;
             this.txtNo_.Location = new System.Drawing.Point(266, 12);
             this.txtNo_.Name = "txtNo_";
             this.txtNo_.Properties.ReadOnly = true;

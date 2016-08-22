@@ -35,3 +35,12 @@ D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLay
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
 D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb

@@ -88,15 +88,14 @@ namespace DataAccessLayer
         {
             try
             {
-                SqlCommand command = new SqlCommand();
-                int id = -1;
+                SqlCommand command = new SqlCommand(); 
                 command = AddParameter(parameter, sql);
-                command.ExecuteNonQuery();
-                return id;
+                return command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                throw;
+                Library.Message("Error: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return 0; 
             }
             finally
             {
@@ -115,6 +114,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+                Library.Message("Error: " + ex.Message + "\n" + ex.ToString(),"Cảnh Báo");
                 return 0; 
             }
             finally

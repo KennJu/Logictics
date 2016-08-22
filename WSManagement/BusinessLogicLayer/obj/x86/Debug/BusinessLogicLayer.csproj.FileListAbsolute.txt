@@ -53,3 +53,4 @@ C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLaye
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
