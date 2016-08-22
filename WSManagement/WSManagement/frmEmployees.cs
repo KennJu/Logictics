@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BusinessLogicLayer;
 using DataTransferObject;
+
 namespace WSManagement
 {
     public partial class frmEmployees : DevExpress.XtraEditors.XtraForm
@@ -28,14 +29,14 @@ namespace WSManagement
             {
                 logicEmploy = new EmployeeLogic();
                 infoEmploy = new EmployeeData();             
-                gridControl1.DataSource = logicEmploy.GetAllEmployee();
-                //gridView1.Columns[0].Visible = false;
-                //gridView1.Columns[1].Caption = "Mã Nhân Viên";
-                //gridView1.Columns[2].Visible = true;
-                //gridView1.Columns[2].Caption = "Tên Nhân Viên";
-                //gridView1.OptionsView.ShowAutoFilterRow = true;
-                //gridView1.OptionsView.ColumnAutoWidth = false;
-                gridView1.BestFitColumns();
+                gridMaster.DataSource = logicEmploy.GetAllEmployee();
+                ViewDetail.Columns[0].Visible = false;
+                ViewDetail.Columns[1].Caption = "Mã Nhân Viên";
+                ViewDetail.Columns[2].Visible = true;
+                ViewDetail.Columns[2].Caption = "Tên Nhân Viên";
+                ViewDetail.OptionsView.ShowAutoFilterRow = true;
+                ViewDetail.OptionsView.ColumnAutoWidth = false;
+                ViewDetail.BestFitColumns();
                 //txtNo_.DataBindings.Add("Text", elogic.GetAllEmployee(), "No_");
                 //txtFirstName.DataBindings.Add("Text", elogic.GetAllEmployee(), "FirstName");
             }
@@ -79,7 +80,7 @@ namespace WSManagement
             }
             finally
             {
-                gridControl1.DataSource = logicEmploy.GetAllEmployee();
+                gridMaster.DataSource = logicEmploy.GetAllEmployee();
             }
         }
 
@@ -114,7 +115,7 @@ namespace WSManagement
                 TypeConmand = 2;
                 btnEdit.Text = "&Hủy Bỏ";
                 btnAdd.Enabled = false;
-                gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
+                ViewDetail.OptionsSelection.EnableAppearanceFocusedRow = false;
                 btnDelete.Enabled = false;
                 DefaultSetting(false);
 
@@ -155,7 +156,7 @@ namespace WSManagement
 
             if (kq==1)
             {
-                gridControl1.DataSource = logicEmploy.GetAllEmployee();
+                gridMaster.DataSource = logicEmploy.GetAllEmployee();
                 TypeConmand = 0;
                 btnEdit.Text = "&Sửa";
                 btnAdd.Text = "&Thêm";
@@ -212,43 +213,43 @@ namespace WSManagement
         }
         private void BindingData()
         {
-            if (gridView1.FocusedRowHandle<0) 
+            if (ViewDetail.FocusedRowHandle<0) 
             {
                 return;
             }  
-            txtNo_.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "No_").ToString();
-            txtFirstName.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FirstName").ToString();
-            txtLastName.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "LastName").ToString();
-            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Gender").ToString() == "Nam")
+            txtNo_.Text = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "No_").ToString();
+            txtFirstName.Text = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "FirstName").ToString();
+            txtLastName.Text = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "LastName").ToString();
+            if (ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "Gender").ToString() == "Nam")
             {
                 radNam.Checked = true;
             }
             else
                 radNu.Checked = true;
 
-            deNgaysinh.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "BirthDate").ToString();
-            txtNoisinh.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PlaceOfBith"));
+            deNgaysinh.EditValue = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "BirthDate").ToString();
+            txtNoisinh.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "PlaceOfBith"));
 
             //lookUpQuoctich.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Quoctich").ToString();
             //lookUpTonGiao.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Tongiao").ToString();
             //lookUpDanToc.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Dantoc").ToString();
-            if (Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MarialStatus")) == "Độc Thân")
+            if (Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "MarialStatus")) == "Độc Thân")
             {
                 raddocthan.Checked = true;
             }
-            else if (Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MarialStatus")) == "Có Gia Đình")
+            else if (Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "MarialStatus")) == "Có Gia Đình")
             {
                 radCogiadinh.Checked = true;
             }
-            txtDienThoai.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Phone"));
-            txtEmail.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Email"));
-            txtAddress.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Address"));
-            deNgayVaoLam.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CreateDate").ToString();
-            txtCMND.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CMND"));
-            deNgayCap.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DateOfIssue").ToString();
-            txtNoiCap.Text = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PlaceOfIssue"));
-            lookUpPhongBan.EditValue = Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Department"));
-            lookUpChucVu.EditValue= Library.IsDBNull(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "JobTitle"));            
+            txtDienThoai.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "Phone"));
+            txtEmail.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "Email"));
+            txtAddress.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "Address"));
+            deNgayVaoLam.EditValue = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "CreateDate").ToString();
+            txtCMND.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "CMND"));
+            deNgayCap.EditValue = ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "DateOfIssue").ToString();
+            txtNoiCap.Text = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "PlaceOfIssue"));
+            lookUpPhongBan.EditValue = Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "Department"));
+            lookUpChucVu.EditValue= Library.IsDBNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle, "JobTitle"));            
         }
         private void LoadData()
         {

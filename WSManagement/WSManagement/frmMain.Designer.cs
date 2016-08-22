@@ -421,6 +421,7 @@
             this.bbiSupplier.LargeWidth = 85;
             this.bbiSupplier.Name = "bbiSupplier";
             this.bbiSupplier.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiSupplier.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSupplier_ItemClick);
             // 
             // bbiItem
             // 

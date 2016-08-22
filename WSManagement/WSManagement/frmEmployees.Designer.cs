@@ -109,8 +109,8 @@
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridMaster = new DevExpress.XtraGrid.GridControl();
+            this.ViewDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -192,8 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl3
@@ -786,8 +786,8 @@
             // 
             // radCogiadinh
             // 
-            this.radCogiadinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radCogiadinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.radCogiadinh.AutoSize = true;
             this.radCogiadinh.BackColor = System.Drawing.Color.Transparent;
             this.radCogiadinh.Location = new System.Drawing.Point(89, 3);
@@ -1177,37 +1177,36 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.gridControl1);
+            this.panelControl2.Controls.Add(this.gridMaster);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 257);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(854, 463);
             this.panelControl2.TabIndex = 7;
             // 
-            // gridControl1
+            // gridMaster
             // 
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(850, 459);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.UseEmbeddedNavigator = true;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.gridMaster.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gridMaster.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridMaster.Location = new System.Drawing.Point(2, 2);
+            this.gridMaster.MainView = this.ViewDetail;
+            this.gridMaster.Name = "gridMaster";
+            this.gridMaster.Size = new System.Drawing.Size(850, 459);
+            this.gridMaster.TabIndex = 0;
+            this.gridMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.ViewDetail});
+            this.gridMaster.Click += new System.EventHandler(this.gridControl1_Click);
             // 
-            // gridView1
+            // ViewDetail
             // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
+            this.ViewDetail.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.ViewDetail.GridControl = this.gridMaster;
+            this.ViewDetail.Name = "ViewDetail";
+            this.ViewDetail.OptionsBehavior.ReadOnly = true;
+            this.ViewDetail.OptionsView.ShowGroupPanel = false;
+            this.ViewDetail.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.ViewDetail.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.ViewDetail.Click += new System.EventHandler(this.gridView1_Click);
             // 
             // frmEmployees
             // 
@@ -1304,8 +1303,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1365,8 +1364,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridMaster;
+        private DevExpress.XtraGrid.Views.Grid.GridView ViewDetail;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SearchControl searchControl1;

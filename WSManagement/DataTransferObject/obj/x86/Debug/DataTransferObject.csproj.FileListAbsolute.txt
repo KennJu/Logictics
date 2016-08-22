@@ -33,3 +33,9 @@ C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObjec
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb

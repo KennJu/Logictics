@@ -105,6 +105,12 @@ namespace WSManagement
         {
             frmDepartment frm = new frmDepartment();
             ViewForm(frm);
-        } 
+        }
+
+        private void bbiSupplier_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmSupplier frm = new frmSupplier();
+            ViewForm(frm);
+        }
     }
 }
