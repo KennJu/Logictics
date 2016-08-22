@@ -1,0 +1,37 @@
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb

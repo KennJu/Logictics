@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSManagement", "WSManagement\WSManagement.csproj", "{5241A4FF-1810-4AEC-836F-48CE166574FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObject", "DataTransferObject\DataTransferObject.csproj", "{8E69C7A1-19AB-4D21-AB42-7FB2CB341DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{3F5D9587-653A-421E-B3FB-DC998BE28395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{0B551048-0C6C-48EA-87FC-FF0A34273756}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5241A4FF-1810-4AEC-836F-48CE166574FA}.Debug|x86.ActiveCfg = Debug|x86
+		{5241A4FF-1810-4AEC-836F-48CE166574FA}.Debug|x86.Build.0 = Debug|x86
+		{5241A4FF-1810-4AEC-836F-48CE166574FA}.Release|x86.ActiveCfg = Release|x86
+		{5241A4FF-1810-4AEC-836F-48CE166574FA}.Release|x86.Build.0 = Release|x86
+		{8E69C7A1-19AB-4D21-AB42-7FB2CB341DE6}.Debug|x86.ActiveCfg = Debug|x86
+		{8E69C7A1-19AB-4D21-AB42-7FB2CB341DE6}.Debug|x86.Build.0 = Debug|x86
+		{8E69C7A1-19AB-4D21-AB42-7FB2CB341DE6}.Release|x86.ActiveCfg = Release|x86
+		{8E69C7A1-19AB-4D21-AB42-7FB2CB341DE6}.Release|x86.Build.0 = Release|x86
+		{3F5D9587-653A-421E-B3FB-DC998BE28395}.Debug|x86.ActiveCfg = Debug|x86
+		{3F5D9587-653A-421E-B3FB-DC998BE28395}.Debug|x86.Build.0 = Debug|x86
+		{3F5D9587-653A-421E-B3FB-DC998BE28395}.Release|x86.ActiveCfg = Release|x86
+		{3F5D9587-653A-421E-B3FB-DC998BE28395}.Release|x86.Build.0 = Release|x86
+		{0B551048-0C6C-48EA-87FC-FF0A34273756}.Debug|x86.ActiveCfg = Debug|x86
+		{0B551048-0C6C-48EA-87FC-FF0A34273756}.Debug|x86.Build.0 = Debug|x86
+		{0B551048-0C6C-48EA-87FC-FF0A34273756}.Release|x86.ActiveCfg = Release|x86
+		{0B551048-0C6C-48EA-87FC-FF0A34273756}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

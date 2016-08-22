@@ -1,0 +1,29 @@
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+E:\OU\Lap trinh CSDL\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csprojResolveAssemblyReference.cache

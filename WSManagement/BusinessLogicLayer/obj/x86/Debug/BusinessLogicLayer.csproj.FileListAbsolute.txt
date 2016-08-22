@@ -1,0 +1,45 @@
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.Properties.Resources.resources
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb

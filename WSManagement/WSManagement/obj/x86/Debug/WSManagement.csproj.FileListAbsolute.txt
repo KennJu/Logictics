@@ -1,0 +1,131 @@
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+D:\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+D:\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+D:\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csprojResolveAssemblyReference.cache
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.XtraForm1.resources
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csproj.GenerateResource.Cache
+D:\Synx Work\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+D:\Synx Work\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+D:\Synx Work\Project_C#\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Project_C#\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+C:\Users\Administrator\Desktop\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmAbout.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csprojResolveAssemblyReference.cache
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmAbout.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csproj.GenerateResource.Cache
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\DataTransferObject.dll
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\DataAccessLayer.dll
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\DataTransferObject.pdb
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\bin\Debug\DataAccessLayer.pdb
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\bin\Debug\DataAccessLayer.pdb
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmAbout.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.ScreenChart.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmEmployees.resources
+D:\Open University\HKIII. LT CSDL\Dang Lam\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmDepartment.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmDepartment.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmEmployees.resources
+E:\OU\Lap trinh CSDL\WSManagement\WSManagement\obj\x86\Debug\WSManagement.ScreenChart.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\WSManagement.exe.config
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csprojResolveAssemblyReference.cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmAbout.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmDepartment.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmEmployees.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmMain.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSplashScreen.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmWait.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Properties.Resources.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLogin.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.ScreenChart.resources
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csproj.GenerateResource.Cache
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\WSManagement.exe
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\WSManagement.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\DataTransferObject.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\DataAccessLayer.dll
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\BusinessLogicLayer.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\DataTransferObject.pdb
+D:\Open University\HKIII. LT CSDL\Logictics\QuanLyKho\WSManagement\WSManagement\bin\Debug\DataAccessLayer.pdb
