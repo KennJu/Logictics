@@ -130,12 +130,37 @@ namespace WSManagement
                 DefaultSetting(true);
             }
         }
-
+        private bool CheckValidData()
+        {
+            if (txtNo_.Text=="")
+            {
+                Library.Message("Vui lòng nhập Mã nhân viên", "Cảnh Báo" + this.Text);
+                txtNo_.Focus();
+                return false;
+            }
+            else if (txtFirstName.Text == "")
+            {
+                Library.Message("Vui lòng nhập Họ", "Cảnh Báo" + this.Text);
+                txtNo_.Focus();
+                return false    ;
+            }
+            if (txtLastName.Text == "")
+            {
+                Library.Message("Vui lòng nhập Tên nhân viên", "Cảnh Báo" + this.Text);
+                txtNo_.Focus();
+                return false;
+            }
+            return true;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             int kq = 0;
             try
             {
+                if (!CheckValidData())
+	            {
+                    return;
+	            }
                 if (TypeConmand == 1)
                 {
                     //insert to database

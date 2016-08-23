@@ -1195,7 +1195,7 @@
             // 
             this.gridMaster.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridMaster.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridMaster.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridMaster.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridMaster.Location = new System.Drawing.Point(2, 2);
             this.gridMaster.MainView = this.ViewDetail;
             this.gridMaster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
