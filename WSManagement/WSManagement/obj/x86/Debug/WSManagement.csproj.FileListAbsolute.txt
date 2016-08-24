@@ -177,3 +177,5 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSupplier.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Template.resources
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmSupplier.resources
+C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Template.resources

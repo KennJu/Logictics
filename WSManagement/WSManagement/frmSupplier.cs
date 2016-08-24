@@ -25,7 +25,6 @@ namespace WSManagement
             Info = new SupplierData();
             Logic = new SupplierLogic();
             gridMaster.DataSource = Logic.GetData();
-
             gridDetail.Columns[0].Visible = false;
             gridDetail.Columns[1].Caption = "Mã Nhà Cung Cấp";
             gridDetail.Columns[2].Visible = false;  
@@ -43,8 +42,7 @@ namespace WSManagement
             gridDetail.Columns[15].Visible = false;
             gridDetail.OptionsView.ShowAutoFilterRow = true;
             gridDetail.OptionsView.ColumnAutoWidth = false;
-            gridDetail.BestFitColumns();
-            
+            gridDetail.BestFitColumns();            
         }
 
         private void BindingData()
@@ -64,22 +62,11 @@ namespace WSManagement
             txtWebsite.Text = gridDetail.GetRowCellValue(gridDetail.FocusedRowHandle, "Website").ToString();
             txtContact.Text = gridDetail.GetRowCellValue(gridDetail.FocusedRowHandle, "Contact").ToString();
             txtContactPhone.Text = gridDetail.GetRowCellValue(gridDetail.FocusedRowHandle, "ContactPhone").ToString();
-
-        }
-
-        private void textEdit11_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit9_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        } 
 
         private void gridDetail_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             BindingData();
-        }
+        } 
     }
 }

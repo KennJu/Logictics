@@ -192,10 +192,10 @@ namespace DataAccessLayer
                 return  clsDatabase.UpdateData("Employee_Delete", SQLParameters);
             }
             catch (Exception ex)
-            { 
-                throw ex;
-            }
-            return 0;
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo");
+                return 0;
+            } 
         } 
     }
 }

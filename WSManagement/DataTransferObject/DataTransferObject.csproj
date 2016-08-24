@@ -65,16 +65,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellData.cs" />
+    <Compile Include="CellDetailData.cs" />
     <Compile Include="CityData.cs" />
     <Compile Include="clsXML.cs" />
     <Compile Include="CountryData.cs" />
+    <Compile Include="CurrencyData.cs" />
     <Compile Include="DepartmentData.cs" />
     <Compile Include="DevelopersData.cs" />
     <Compile Include="EmployeeData.cs" />
+    <Compile Include="ExchangeRateData.cs" />
+    <Compile Include="GroupFunctionData.cs" />
+    <Compile Include="GroupUserData.cs" />
+    <Compile Include="ItemData.cs" />
+    <Compile Include="ItemGroupData.cs" />
+    <Compile Include="JobTitleData.cs" />
+    <Compile Include="JournalEntryData.cs" />
+    <Compile Include="JournalExportHeaderData.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="LocationData.cs" />
     <Compile Include="LoginData.cs" />
     <Compile Include="LotNoData.cs" />
+    <Compile Include="LotNo_Data.cs" />
+    <Compile Include="MainFunctionData.cs" />
     <Compile Include="QtyperUnitData.cs" />
     <Compile Include="SupplierData.cs" />
     <Compile Include="System.cs" />
