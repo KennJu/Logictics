@@ -63,5 +63,5 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLay
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.dll
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.pdb
-C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\BusinessLogicLayer\obj\x86\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache

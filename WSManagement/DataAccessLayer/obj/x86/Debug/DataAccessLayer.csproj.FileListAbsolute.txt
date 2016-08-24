@@ -48,8 +48,8 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.dll
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\bin\Debug\DataTransferObject.pdb
-C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.Properties.Resources.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

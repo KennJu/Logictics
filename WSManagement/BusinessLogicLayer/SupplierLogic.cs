@@ -17,7 +17,20 @@ namespace BusinessLogicLayer
         public DataTable GetData()
         {
             return Supplier.GetData();
+        }  
+        public int Insert(SupplierData iSupplier)
+        {
+            return Supplier.Insert(iSupplier);
         }
 
+        public int Update(SupplierData iSupplier)
+        {
+            return Supplier.Update(iSupplier); 
+        }
+
+        public int Delete(SupplierData iSupplier)
+        {
+            return Supplier.Delete(iSupplier);
+        }
     }
 }

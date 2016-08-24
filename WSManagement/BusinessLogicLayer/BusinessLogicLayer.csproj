@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountryLogic.cs" />
     <Compile Include="DepartmentLogic.cs" />
     <Compile Include="EmployeeLogic.cs" />
     <Compile Include="LoginLogic.cs" />

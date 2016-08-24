@@ -33,7 +33,7 @@
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.layoutButton = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -43,13 +43,13 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelRight = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.lookUpCountry = new DevExpress.XtraEditors.LookUpEdit();
             this.txtContactPhone = new DevExpress.XtraEditors.TextEdit();
             this.txtWebsite = new DevExpress.XtraEditors.TextEdit();
             this.txtFax = new DevExpress.XtraEditors.TextEdit();
             this.txtContact = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtPhone = new DevExpress.XtraEditors.TextEdit();
-            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.txtNo_ = new DevExpress.XtraEditors.TextEdit();
@@ -58,7 +58,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -67,6 +66,7 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelFill = new DevExpress.XtraEditors.PanelControl();
             this.gridMaster = new DevExpress.XtraGrid.GridControl();
             this.gridDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -84,13 +84,13 @@
             this.panelRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebsite.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNo_.Properties)).BeginInit();
@@ -99,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
@@ -108,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).BeginInit();
             this.panelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).BeginInit();
@@ -128,7 +128,7 @@
             this.layoutControl1.Controls.Add(this.btnExit);
             this.layoutControl1.Controls.Add(this.btnSave);
             this.layoutControl1.Controls.Add(this.btnDelete);
-            this.layoutControl1.Controls.Add(this.btnUpdate);
+            this.layoutControl1.Controls.Add(this.btnEdit);
             this.layoutControl1.Controls.Add(this.btnAdd);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 2);
@@ -148,6 +148,7 @@
             this.btnExit.StyleController = this.layoutControl1;
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -159,6 +160,7 @@
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "&Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -170,17 +172,19 @@
             this.btnDelete.StyleController = this.layoutControl1;
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "&Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnUpdate
+            // btnEdit
             // 
-            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Appearance.Options.UseFont = true;
-            this.btnUpdate.Location = new System.Drawing.Point(12, 52);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(126, 36);
-            this.btnUpdate.StyleController = this.layoutControl1;
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "&Sửa";
+            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Appearance.Options.UseFont = true;
+            this.btnEdit.Location = new System.Drawing.Point(12, 52);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(126, 36);
+            this.btnEdit.StyleController = this.layoutControl1;
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "&Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -191,7 +195,8 @@
             this.btnAdd.Size = new System.Drawing.Size(126, 36);
             this.btnAdd.StyleController = this.layoutControl1;
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "&Thêm"; 
+            this.btnAdd.Text = "&Thêm";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // layoutButton
             // 
@@ -228,7 +233,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.btnUpdate;
+            this.layoutControlItem2.Control = this.btnEdit;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(0, 40);
@@ -301,13 +306,13 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.lookUpCountry);
             this.layoutControl2.Controls.Add(this.txtContactPhone);
             this.layoutControl2.Controls.Add(this.txtWebsite);
             this.layoutControl2.Controls.Add(this.txtFax);
             this.layoutControl2.Controls.Add(this.txtContact);
             this.layoutControl2.Controls.Add(this.txtEmail);
             this.layoutControl2.Controls.Add(this.txtPhone);
-            this.layoutControl2.Controls.Add(this.txtCountry);
             this.layoutControl2.Controls.Add(this.txtName);
             this.layoutControl2.Controls.Add(this.txtAddress);
             this.layoutControl2.Controls.Add(this.txtNo_);
@@ -320,27 +325,41 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // lookUpCountry
+            // 
+            this.lookUpCountry.EditValue = "";
+            this.lookUpCountry.Location = new System.Drawing.Point(498, 36);
+            this.lookUpCountry.Name = "lookUpCountry";
+            this.lookUpCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpCountry.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("No_", "Mã Quốc Gia"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên Quốc Gia")});
+            this.lookUpCountry.Size = new System.Drawing.Size(303, 20);
+            this.lookUpCountry.StyleController = this.layoutControl2;
+            this.lookUpCountry.TabIndex = 16;
+            // 
             // txtContactPhone
             // 
-            this.txtContactPhone.Location = new System.Drawing.Point(450, 132);
+            this.txtContactPhone.Location = new System.Drawing.Point(498, 132);
             this.txtContactPhone.Name = "txtContactPhone";
-            this.txtContactPhone.Size = new System.Drawing.Size(351, 20);
+            this.txtContactPhone.Size = new System.Drawing.Size(303, 20);
             this.txtContactPhone.StyleController = this.layoutControl2;
             this.txtContactPhone.TabIndex = 15;
             // 
             // txtWebsite
             // 
-            this.txtWebsite.Location = new System.Drawing.Point(450, 108);
+            this.txtWebsite.Location = new System.Drawing.Point(498, 108);
             this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(351, 20);
+            this.txtWebsite.Size = new System.Drawing.Size(303, 20);
             this.txtWebsite.StyleController = this.layoutControl2;
-            this.txtWebsite.TabIndex = 14; 
+            this.txtWebsite.TabIndex = 14;
             // 
             // txtFax
             // 
-            this.txtFax.Location = new System.Drawing.Point(450, 84);
+            this.txtFax.Location = new System.Drawing.Point(498, 84);
             this.txtFax.Name = "txtFax";
-            this.txtFax.Size = new System.Drawing.Size(351, 20);
+            this.txtFax.Size = new System.Drawing.Size(303, 20);
             this.txtFax.StyleController = this.layoutControl2;
             this.txtFax.TabIndex = 13;
             // 
@@ -348,7 +367,7 @@
             // 
             this.txtContact.Location = new System.Drawing.Point(108, 132);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(242, 20);
+            this.txtContact.Size = new System.Drawing.Size(290, 20);
             this.txtContact.StyleController = this.layoutControl2;
             this.txtContact.TabIndex = 12;
             // 
@@ -356,7 +375,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(108, 108);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(242, 20);
+            this.txtEmail.Size = new System.Drawing.Size(290, 20);
             this.txtEmail.StyleController = this.layoutControl2;
             this.txtEmail.TabIndex = 11;
             // 
@@ -364,23 +383,15 @@
             // 
             this.txtPhone.Location = new System.Drawing.Point(108, 84);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(242, 20);
+            this.txtPhone.Size = new System.Drawing.Size(290, 20);
             this.txtPhone.StyleController = this.layoutControl2;
             this.txtPhone.TabIndex = 9;
             // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(450, 36);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(351, 20);
-            this.txtCountry.StyleController = this.layoutControl2;
-            this.txtCountry.TabIndex = 8;
-            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(450, 12);
+            this.txtName.Location = new System.Drawing.Point(498, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(351, 20);
+            this.txtName.Size = new System.Drawing.Size(303, 20);
             this.txtName.StyleController = this.layoutControl2;
             this.txtName.TabIndex = 7;
             // 
@@ -396,7 +407,7 @@
             // 
             this.txtNo_.Location = new System.Drawing.Point(108, 12);
             this.txtNo_.Name = "txtNo_";
-            this.txtNo_.Size = new System.Drawing.Size(242, 20);
+            this.txtNo_.Size = new System.Drawing.Size(290, 20);
             this.txtNo_.StyleController = this.layoutControl2;
             this.txtNo_.TabIndex = 5;
             // 
@@ -404,7 +415,7 @@
             // 
             this.txtSearchName.Location = new System.Drawing.Point(108, 36);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(242, 20);
+            this.txtSearchName.Size = new System.Drawing.Size(290, 20);
             this.txtSearchName.StyleController = this.layoutControl2;
             this.txtSearchName.TabIndex = 4;
             // 
@@ -417,7 +428,6 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem9,
-            this.layoutControlItem10,
             this.layoutControlItem11,
             this.layoutControlItem13,
             this.layoutControlItem14,
@@ -425,7 +435,8 @@
             this.layoutControlItem16,
             this.layoutControlItem17,
             this.layoutControlItem8,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem12});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(813, 175);
@@ -438,7 +449,7 @@
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(390, 24);
             this.layoutControlItem6.Text = "Tên Tìm Nhanh";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -448,7 +459,7 @@
             this.layoutControlItem7.CustomizationFormText = "Mã Nhà Cung Cấp:";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(390, 24);
             this.layoutControlItem7.Text = "Mã Nhà Cung Cấp:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -456,21 +467,11 @@
             // 
             this.layoutControlItem9.Control = this.txtName;
             this.layoutControlItem9.CustomizationFormText = "Tên Nhà Cung Cấp";
-            this.layoutControlItem9.Location = new System.Drawing.Point(342, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(390, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(451, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(403, 24);
             this.layoutControlItem9.Text = "Tên Nhà Cung Cấp";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(93, 13);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.txtCountry;
-            this.layoutControlItem10.CustomizationFormText = "Quốc Gia:";
-            this.layoutControlItem10.Location = new System.Drawing.Point(342, 24);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(451, 24);
-            this.layoutControlItem10.Text = "Quốc Gia:";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(93, 13);
             // 
             // layoutControlItem11
             // 
@@ -478,7 +479,7 @@
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem11";
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(390, 24);
             this.layoutControlItem11.Text = "Điện Thoại:";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -488,7 +489,7 @@
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem13";
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(390, 24);
             this.layoutControlItem13.Text = "Email:";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -498,7 +499,7 @@
             this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(390, 24);
             this.layoutControlItem14.Text = "Người Liên Hệ:";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -506,9 +507,9 @@
             // 
             this.layoutControlItem15.Control = this.txtFax;
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(342, 72);
+            this.layoutControlItem15.Location = new System.Drawing.Point(390, 72);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(451, 24);
+            this.layoutControlItem15.Size = new System.Drawing.Size(403, 24);
             this.layoutControlItem15.Text = "Fax:";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -516,9 +517,9 @@
             // 
             this.layoutControlItem16.Control = this.txtWebsite;
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
-            this.layoutControlItem16.Location = new System.Drawing.Point(342, 96);
+            this.layoutControlItem16.Location = new System.Drawing.Point(390, 96);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(451, 24);
+            this.layoutControlItem16.Size = new System.Drawing.Size(403, 24);
             this.layoutControlItem16.Text = "Website:";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -526,9 +527,9 @@
             // 
             this.layoutControlItem17.Control = this.txtContactPhone;
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
-            this.layoutControlItem17.Location = new System.Drawing.Point(342, 120);
+            this.layoutControlItem17.Location = new System.Drawing.Point(390, 120);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(451, 24);
+            this.layoutControlItem17.Size = new System.Drawing.Size(403, 24);
             this.layoutControlItem17.Text = "Điện Thoại Liên Hệ:";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(93, 13);
             // 
@@ -551,6 +552,16 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(793, 11);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.lookUpCountry;
+            this.layoutControlItem12.CustomizationFormText = "Quốc Gia:";
+            this.layoutControlItem12.Location = new System.Drawing.Point(390, 24);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(403, 24);
+            this.layoutControlItem12.Text = "Quốc Gia:";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(93, 13);
             // 
             // panelFill
             // 
@@ -578,6 +589,7 @@
             this.gridDetail.GridControl = this.gridMaster;
             this.gridDetail.Name = "gridDetail";
             this.gridDetail.OptionsView.ShowGroupPanel = false;
+            this.gridDetail.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.gridDetail_ShowingEditor);
             this.gridDetail.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridDetail_FocusedRowChanged);
             // 
             // frmSupplier
@@ -605,13 +617,13 @@
             this.panelRight.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebsite.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNo_.Properties)).EndInit();
@@ -620,7 +632,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
@@ -629,6 +640,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).EndInit();
             this.panelFill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).EndInit();
@@ -648,7 +660,7 @@
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraLayout.LayoutControlGroup layoutButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -663,7 +675,6 @@
         private DevExpress.XtraEditors.TextEdit txtContact;
         private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.TextEdit txtPhone;
-        private DevExpress.XtraEditors.TextEdit txtCountry;
         private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraEditors.TextEdit txtAddress;
         private DevExpress.XtraEditors.TextEdit txtNo_;
@@ -672,7 +683,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
@@ -681,5 +691,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpCountry;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }

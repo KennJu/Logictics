@@ -285,7 +285,7 @@ namespace WSManagement
         private void DefaultSetting(bool flag)
         { 
             btnSave.Enabled = !flag;
-            foreach (Control item in this.layoutControl1.Controls)
+            foreach (Control item in this.layoutControl2.Controls)
             {     
                 if (item.GetType() == typeof(TextEdit)||item.GetType() == typeof(DateEdit)||item.GetType() == typeof(LookUpEdit))
                 //if (item.GetType() == typeof(TextEdit))

@@ -58,9 +58,7 @@ namespace WSManagement
                 objLogin.Password = txtPassword.Text.Trim();
                 if (login.Login2System(objLogin) == 1)
                 {
-                    UserName = objLogin.UserName;
-                    ServerName = SystemWS.ServerName;
-                    DataBase = SystemWS.DataBase;
+                    SystemWS.Login = objLogin.UserName;
                     Thread t = new Thread(new ThreadStart(LoadFormMain));
                     t.Start();
                     //t.Abort();
