@@ -61,6 +61,18 @@ namespace DataTransferObject
                 return "";
             }
         }
+        public static decimal IsZeroDecimal(object obj)
+        {
+            try
+            {
+                return Convert.ToDecimal(obj);
+            }
+            catch
+            {
+
+                return 0;
+            }
+        }
 
         public static string IsNull(string str)
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataTransferObject
 {
-    class ItemGroupData
+    public class ItemGroupData
     {   
         public int RowID { get; set; }
         public string No_ { get; set; }

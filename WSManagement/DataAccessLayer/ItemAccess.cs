@@ -62,11 +62,14 @@ namespace DataAccessLayer
             {
                 SqlParameter[] SQLParameter = { new SqlParameter("@No_", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@No_2", SqlDbType.VarChar,20) ,
-                                            new SqlParameter("@Name", SqlDbType.VarChar,100) ,
+                                            new SqlParameter("@Name", SqlDbType.NVarChar,100) ,
                                             new SqlParameter("@NameEn", SqlDbType.VarChar,100) ,
                                             new SqlParameter("@Type", SqlDbType.Int,20) ,
                                             new SqlParameter("@Size", SqlDbType.NVarChar,200) ,
                                             new SqlParameter("@SearchName", SqlDbType.NVarChar,200) ,
+                                            new SqlParameter("@Unit", SqlDbType.VarChar,20) ,
+                                            new SqlParameter("@qtyperUnit", SqlDbType.Decimal,20) ,
+                                            new SqlParameter("@UnitDetail", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@ItemGroup", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@NetWeight", SqlDbType.Decimal,20) ,
                                             new SqlParameter("@GrossWeight", SqlDbType.Decimal,20) ,
@@ -85,16 +88,19 @@ namespace DataAccessLayer
                 SQLParameter[4].Value = _Item.Type;
                 SQLParameter[5].Value = _Item.Size;
                 SQLParameter[6].Value = _Item.SearchName;
-                SQLParameter[7].Value = _Item.ItemGroup;
-                SQLParameter[8].Value = _Item.NetWeight;
-                SQLParameter[9].Value = _Item.GrossWeight;
-                SQLParameter[10].Value = _Item.Description;
-                SQLParameter[11].Value = _Item.PostingDate;
-                SQLParameter[12].Value = _Item.UserID;
-                SQLParameter[13].Value = _Item.Status;
-                SQLParameter[14].Value = _Item.UnitImport;
-                SQLParameter[15].Value = _Item.UnitExport;
-                SQLParameter[16].Value = _Item.UnitStock;
+                SQLParameter[7].Value = _Item.Unit;
+                SQLParameter[8].Value = _Item.qtyperUnit;
+                SQLParameter[9].Value = _Item.UnitDetail;
+                SQLParameter[10].Value = _Item.ItemGroup;
+                SQLParameter[11].Value = _Item.NetWeight;
+                SQLParameter[12].Value = _Item.GrossWeight;
+                SQLParameter[13].Value = _Item.Description;
+                SQLParameter[14].Value = _Item.PostingDate;
+                SQLParameter[15].Value = _Item.UserID;
+                SQLParameter[16].Value = _Item.Status;
+                SQLParameter[17].Value = _Item.UnitImport;
+                SQLParameter[18].Value = _Item.UnitExport;
+                SQLParameter[19].Value = _Item.UnitStock;
                 return clsDatabase.InsertData("Item_Insert", SQLParameter);
             }
             catch (Exception ex)
@@ -102,7 +108,6 @@ namespace DataAccessLayer
                 Library.Message("Lỗi: " + ex.Message, "Cảnh Báo");
                 return 0;
             }
-            
         }
         public int Update(ItemData _Item)
         {
@@ -110,11 +115,14 @@ namespace DataAccessLayer
             {
                 SqlParameter[] SQLParameter = { new SqlParameter("@No_", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@No_2", SqlDbType.VarChar,20) ,
-                                            new SqlParameter("@Name", SqlDbType.VarChar,100) ,
+                                            new SqlParameter("@Name", SqlDbType.NVarChar,100) ,
                                             new SqlParameter("@NameEn", SqlDbType.VarChar,100) ,
                                             new SqlParameter("@Type", SqlDbType.Int,20) ,
                                             new SqlParameter("@Size", SqlDbType.NVarChar,200) ,
                                             new SqlParameter("@SearchName", SqlDbType.NVarChar,200) ,
+                                            new SqlParameter("@Unit", SqlDbType.VarChar,20) ,
+                                            new SqlParameter("@qtyperUnit", SqlDbType.Decimal,20) ,
+                                            new SqlParameter("@UnitDetail", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@ItemGroup", SqlDbType.VarChar,20) ,
                                             new SqlParameter("@NetWeight", SqlDbType.Decimal,20) ,
                                             new SqlParameter("@GrossWeight", SqlDbType.Decimal,20) ,
@@ -133,17 +141,20 @@ namespace DataAccessLayer
                 SQLParameter[4].Value = _Item.Type;
                 SQLParameter[5].Value = _Item.Size;
                 SQLParameter[6].Value = _Item.SearchName;
-                SQLParameter[7].Value = _Item.ItemGroup;
-                SQLParameter[8].Value = _Item.NetWeight;
-                SQLParameter[9].Value = _Item.GrossWeight;
-                SQLParameter[10].Value = _Item.Description;
-                SQLParameter[11].Value = _Item.PostingDate;
-                SQLParameter[12].Value = _Item.UserID;
-                SQLParameter[13].Value = _Item.Status;
-                SQLParameter[14].Value = _Item.UnitImport;
-                SQLParameter[15].Value = _Item.UnitExport;
-                SQLParameter[16].Value = _Item.UnitStock;
-                return clsDatabase.UpdateData("Item_Update", SQLParameter);
+                SQLParameter[7].Value = _Item.Unit;
+                SQLParameter[8].Value = _Item.qtyperUnit;
+                SQLParameter[9].Value = _Item.UnitDetail;
+                SQLParameter[10].Value = _Item.ItemGroup;
+                SQLParameter[11].Value = _Item.NetWeight;
+                SQLParameter[12].Value = _Item.GrossWeight;
+                SQLParameter[13].Value = _Item.Description;
+                SQLParameter[14].Value = _Item.PostingDate;
+                SQLParameter[15].Value = _Item.UserID;
+                SQLParameter[16].Value = _Item.Status;
+                SQLParameter[17].Value = _Item.UnitImport;
+                SQLParameter[18].Value = _Item.UnitExport;
+                SQLParameter[19].Value = _Item.UnitStock;
+                return clsDatabase.InsertData("Item_Update", SQLParameter);
             }
             catch (Exception ex)
             {

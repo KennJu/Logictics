@@ -429,6 +429,7 @@
             this.bbiItem.Id = 28;
             this.bbiItem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiItem.LargeGlyph")));
             this.bbiItem.Name = "bbiItem";
+            this.bbiItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiItem_ItemClick);
             // 
             // bbiUnit
             // 
