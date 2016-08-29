@@ -118,5 +118,11 @@ namespace WSManagement
             frmItem frm = new frmItem();
             ViewForm(frm);
         }
+
+        private void bbiCustomer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCustomer frm = new frmCustomer();
+            ViewForm(frm);
+        }
     }
 }

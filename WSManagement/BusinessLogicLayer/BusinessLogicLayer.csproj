@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountryLogic.cs" />
+    <Compile Include="CustomerLogic.cs" />
     <Compile Include="DepartmentLogic.cs" />
     <Compile Include="EmployeeLogic.cs" />
     <Compile Include="ItemGroupLogic.cs" />

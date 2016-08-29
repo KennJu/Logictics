@@ -56,6 +56,7 @@
     <Compile Include="Connectionstrings.cs" />
     <Compile Include="CountryAccess.cs" />
     <Compile Include="CurrencyAccess.cs" />
+    <Compile Include="CustomerAccess.cs" />
     <Compile Include="DepartmentAccess.cs" />
     <Compile Include="EmployeeAccess.cs" />
     <Compile Include="ItemAccess.cs" />
