@@ -86,7 +86,6 @@
     <Compile Include="Library.cs" />
     <Compile Include="LocationData.cs" />
     <Compile Include="LoginData.cs" />
-    <Compile Include="LotNoData.cs" />
     <Compile Include="LotNo_Data.cs" />
     <Compile Include="MainFunctionData.cs" />
     <Compile Include="QtyperUnitData.cs" />

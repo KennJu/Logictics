@@ -9,6 +9,7 @@ namespace DataTransferObject
     {
         public int RowID{ get; set; }
         public string No_{ get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         /// <summary>
         /// Nhóm quyền
@@ -18,10 +19,11 @@ namespace DataTransferObject
         /// 0: không sử dụng;1: đang dùng
         /// </summary>
         public int Status{ get; set; }
-        public GroupUserData(int _rowID,string _no_,string _description,int _groupGrant ,int _status)
+        public GroupUserData(int _rowID,string _no_,string _name,string _description,int _groupGrant ,int _status)
         {
             this.RowID = _rowID;
             this.No_ = _no_;
+            this.Name = _name;
             this.Description= _description;
             this.GroupGrant= _groupGrant;
             this.Status= _status;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using DataAccessLayer;
 using DataTransferObject;
 
@@ -16,6 +17,10 @@ namespace BusinessLogicLayer
         private EmployeeAccess Employees;
 
         public EmployeeLogic() { Employees = new EmployeeAccess(); }
+        public DataTable GetData()
+        {
+            return Employees.GetData();
+        }
 
         public IList<EmployeeData> GetAllEmployee()
         {

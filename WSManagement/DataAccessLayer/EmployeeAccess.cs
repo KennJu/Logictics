@@ -16,6 +16,20 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="dt">Danh sách dữ liệu</param>
         /// <returns>Danh sách Category</returns>
+         public DataTable GetData()
+        {
+            try
+            {
+                string storeName = "Employee_GetList";
+                return clsDatabase.GetDataTable(storeName, (int)clsDatabase.SqlType.StoredProcedure); 
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
+
         public IList<EmployeeData> GetAllEmployee()
         {
             string storeName = "Employee_GetList";

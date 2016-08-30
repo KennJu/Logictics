@@ -124,5 +124,42 @@ namespace WSManagement
             frmCustomer frm = new frmCustomer();
             ViewForm(frm);
         }
+
+        private void bbiUser_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmUsers frm = new frmUsers();
+            ViewForm(frm);
+        }
+
+        private void bbiSignout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void bbiGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmGroup frm = new frmGroup();
+            ViewForm(frm);
+        }
+
+        private void bbiGrant_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiItemGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiUnit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

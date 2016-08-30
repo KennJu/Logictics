@@ -2,7 +2,7 @@
 <root>
   <Server>.</Server>
   <Database>WSManagement</Database>
-  <Username>sa</Username>
+  <UserName>sa</UserName>
   <Password>123</Password>
   <Login>123</Login>
   <Skin>123</Skin>

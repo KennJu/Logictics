@@ -59,6 +59,7 @@
     <Compile Include="CustomerAccess.cs" />
     <Compile Include="DepartmentAccess.cs" />
     <Compile Include="EmployeeAccess.cs" />
+    <Compile Include="GroupUserAccess.cs" />
     <Compile Include="ItemAccess.cs" />
     <Compile Include="ItemGroupAccess.cs" />
     <Compile Include="LoginAccess.cs" />

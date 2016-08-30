@@ -181,3 +181,5 @@ C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\WSManagement\obj\
 C:\Users\Administrator\Documents\GitHub\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.Template.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmItem.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmCustomer.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmGroup.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmUsers.resources

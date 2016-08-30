@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup16 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem26 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem27 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup17 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup18 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem28 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem29 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem30 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skin1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribLeftFooter = new DevExpress.XtraBars.RibbonGalleryBarItem();
@@ -180,14 +180,14 @@
             // 
             // 
             // 
-            galleryItemGroup1.Caption = "Group6";
-            galleryItem1.Caption = "Item5";
-            galleryItem2.Caption = "Item6";
-            galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2});
+            galleryItemGroup16.Caption = "Group6";
+            galleryItem26.Caption = "Item5";
+            galleryItem27.Caption = "Item6";
+            galleryItemGroup16.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem26,
+            galleryItem27});
             this.ribLeftFooter.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup16});
             this.ribLeftFooter.Gallery.ShowItemText = true;
             this.ribLeftFooter.Id = 2;
             this.ribLeftFooter.Name = "ribLeftFooter";
@@ -223,6 +223,7 @@
             this.bbiGroup.Name = "bbiGroup";
             this.bbiGroup.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
             this.bbiGroup.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiGroup_ItemClick);
             // 
             // bbiUser
             // 
@@ -233,6 +234,7 @@
             this.bbiUser.Name = "bbiUser";
             this.bbiUser.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.bbiUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiUser_ItemClick);
             // 
             // bbiGrant
             // 
@@ -240,6 +242,7 @@
             this.bbiGrant.Id = 5;
             this.bbiGrant.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiGrant.LargeGlyph")));
             this.bbiGrant.Name = "bbiGrant";
+            this.bbiGrant.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiGrant_ItemClick);
             // 
             // bbiEmployee
             // 
@@ -295,9 +298,9 @@
             // 
             // 
             // 
-            galleryItemGroup2.Caption = "Group4";
+            galleryItemGroup17.Caption = "Group4";
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup17});
             this.ribbonGalleryBarItem1.Id = 14;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -317,16 +320,16 @@
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group7";
-            galleryItem3.Caption = "Item7";
-            galleryItem4.Caption = "Item8";
-            galleryItem5.Caption = "Item9";
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem3,
-            galleryItem4,
-            galleryItem5});
+            galleryItemGroup18.Caption = "Group7";
+            galleryItem28.Caption = "Item7";
+            galleryItem29.Caption = "Item8";
+            galleryItem30.Caption = "Item9";
+            galleryItemGroup18.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem28,
+            galleryItem29,
+            galleryItem30});
             this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup18});
             this.ribbonGalleryBarItem2.Id = 16;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
             // 
@@ -355,6 +358,7 @@
             this.bbiBackup.Id = 19;
             this.bbiBackup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiBackup.LargeGlyph")));
             this.bbiBackup.Name = "bbiBackup";
+            this.bbiBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiBackup_ItemClick);
             // 
             // bbiRestore
             // 
@@ -369,6 +373,7 @@
             this.bbiSignout.Id = 21;
             this.bbiSignout.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiSignout.LargeGlyph")));
             this.bbiSignout.Name = "bbiSignout";
+            this.bbiSignout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSignout_ItemClick);
             // 
             // bbiDepartment
             // 
@@ -438,6 +443,7 @@
             this.bbiUnit.Id = 29;
             this.bbiUnit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiUnit.LargeGlyph")));
             this.bbiUnit.Name = "bbiUnit";
+            this.bbiUnit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiUnit_ItemClick);
             // 
             // bbiItemGroup
             // 
@@ -448,6 +454,7 @@
             this.bbiItemGroup.Name = "bbiItemGroup";
             this.bbiItemGroup.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
             this.bbiItemGroup.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiItemGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiItemGroup_ItemClick);
             // 
             // bbiLotNo_
             // 
@@ -563,7 +570,6 @@
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.bbiCompany);
             this.ribbonPageGroup6.ItemLinks.Add(this.bbiCustomer);
             this.ribbonPageGroup6.ItemLinks.Add(this.bbiSupplier);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";

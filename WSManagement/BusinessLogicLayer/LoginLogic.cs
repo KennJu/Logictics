@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using DataAccessLayer;
 using DataTransferObject;
 
@@ -31,22 +32,27 @@ namespace BusinessLogicLayer
             return Login.ReadConfig(path );
         }
 
+        public DataTable GetData()
+        {
+            return Login.GetData();
+        } 
+
         public int Login2System(LoginData login)
         {
             return Login.Login2System(login);
         }
 
-        public int InsertLoginData(LoginData iLogin)
+        public int Insert(LoginData iLogin)
         {
             return Login.Insert(iLogin);
         }
 
-        public int UpdateLoginData(LoginData iLogin)
+        public int Update(LoginData iLogin)
         {
             return Login.Update(iLogin);
         }
 
-        public int DeleteLoginData(LoginData iLogin)
+        public int Delete(LoginData iLogin)
         {
             return Login.Delete(iLogin);
         }
