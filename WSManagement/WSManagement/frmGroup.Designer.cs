@@ -48,7 +48,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.panelFill = new DevExpress.XtraEditors.PanelControl();
             this.gridMaster = new DevExpress.XtraGrid.GridControl();
             this.gridDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -71,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).BeginInit();
             this.panelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).BeginInit();
@@ -264,7 +262,7 @@
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRight.Location = new System.Drawing.Point(0, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(720, 179);
+            this.panelRight.Size = new System.Drawing.Size(720, 50);
             this.panelRight.TabIndex = 3;
             // 
             // layoutControl2
@@ -275,7 +273,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(716, 175);
+            this.layoutControl2.Size = new System.Drawing.Size(716, 46);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -304,11 +302,10 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7,
-            this.layoutControlItem9,
-            this.emptySpaceItem1});
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(716, 175);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(716, 46);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -318,7 +315,7 @@
             this.layoutControlItem7.CustomizationFormText = "Mã Khách Hàng:";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(342, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(342, 26);
             this.layoutControlItem7.Text = "Mã Nhóm:";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(52, 13);
             // 
@@ -328,27 +325,17 @@
             this.layoutControlItem9.CustomizationFormText = "Tên Khách Hàng:";
             this.layoutControlItem9.Location = new System.Drawing.Point(342, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(354, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(354, 26);
             this.layoutControlItem9.Text = "Tên Nhóm:";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(52, 13);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 24);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(696, 131);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // panelFill
             // 
             this.panelFill.Controls.Add(this.gridMaster);
             this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(0, 179);
+            this.panelFill.Location = new System.Drawing.Point(0, 50);
             this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(720, 338);
+            this.panelFill.Size = new System.Drawing.Size(720, 467);
             this.panelFill.TabIndex = 4;
             // 
             // gridMaster
@@ -358,7 +345,7 @@
             this.gridMaster.Location = new System.Drawing.Point(2, 2);
             this.gridMaster.MainView = this.gridDetail;
             this.gridMaster.Name = "gridMaster";
-            this.gridMaster.Size = new System.Drawing.Size(716, 334);
+            this.gridMaster.Size = new System.Drawing.Size(716, 463);
             this.gridMaster.TabIndex = 0;
             this.gridMaster.TabStop = false;
             this.gridMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -401,7 +388,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).EndInit();
             this.panelFill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).EndInit();
@@ -432,7 +418,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.PanelControl panelFill;
         private DevExpress.XtraGrid.GridControl gridMaster;
         private DevExpress.XtraGrid.Views.Grid.GridView gridDetail;

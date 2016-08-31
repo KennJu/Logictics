@@ -25,17 +25,17 @@ namespace BusinessLogicLayer
             return Department.GetAllDepartment();
         }
 
-        public int InsertEmployee(DepartmentData infoDepartment)
+        public int Insert(DepartmentData infoDepartment)
         {
             return Department.Insert(infoDepartment);
         }
 
-        public int UpdateEmployee(DepartmentData infoDepartment)
+        public int Update(DepartmentData infoDepartment)
         {
             return Department.Update(infoDepartment);
         }
 
-        public int DeleteEmployee(DepartmentData infoDepartment)
+        public int Delete(DepartmentData infoDepartment)
         {
             return Department.Delete(infoDepartment);
         }

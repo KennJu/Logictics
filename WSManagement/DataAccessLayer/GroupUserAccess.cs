@@ -54,7 +54,7 @@ namespace DataAccessLayer
                                                 new SqlParameter("@Name", SqlDbType.NVarChar,250) , 
                                           };
                 SQLParameter[0].Value = _GroupUser.No_;
-                SQLParameter[2].Value = _GroupUser.Name;
+                SQLParameter[1].Value = _GroupUser.Name;
                 return clsDatabase.UpdateData("GroupUser_Update", SQLParameter);
             }
             catch (Exception ex)
