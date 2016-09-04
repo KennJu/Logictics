@@ -83,6 +83,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +127,18 @@
     </Compile>
     <Compile Include="frmItem.Designer.cs">
       <DependentUpon>frmItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputReceiveItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputReceiveItem.Designer.cs">
+      <DependentUpon>frmInputReceiveItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalReceiveItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalReceiveItem.Designer.cs">
+      <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -187,6 +208,12 @@
     <EmbeddedResource Include="frmItem.resx">
       <DependentUpon>frmItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInputReceiveItem.resx">
+      <DependentUpon>frmInputReceiveItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalReceiveItem.resx">
+      <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +250,17 @@
       <DependentUpon>Template.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

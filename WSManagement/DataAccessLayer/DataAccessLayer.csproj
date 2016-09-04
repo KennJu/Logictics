@@ -62,6 +62,8 @@
     <Compile Include="GroupUserAccess.cs" />
     <Compile Include="ItemAccess.cs" />
     <Compile Include="ItemGroupAccess.cs" />
+    <Compile Include="JournalReceiveHeaderAccess.cs" />
+    <Compile Include="JournalReceiveLineAccess.cs" />
     <Compile Include="LoginAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupplierAccess.cs" />

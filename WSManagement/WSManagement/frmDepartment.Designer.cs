@@ -367,7 +367,7 @@
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelTop);
             this.Name = "frmDepartment";
-            this.Text = "frmDepartment";
+            this.Text = "Phòng Ban";
             this.Load += new System.EventHandler(this.frmDepartmentUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).EndInit();
             this.panelTop.ResumeLayout(false);
