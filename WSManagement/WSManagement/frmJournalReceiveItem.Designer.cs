@@ -159,7 +159,7 @@
             this.btnDelete.Size = new System.Drawing.Size(152, 36);
             this.btnDelete.StyleController = this.layoutControl2;
             this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "&Hủy Phiếu Nhập";
+            this.btnDelete.Text = "&Hủy Phiếu";
             // 
             // btnEdit
             // 

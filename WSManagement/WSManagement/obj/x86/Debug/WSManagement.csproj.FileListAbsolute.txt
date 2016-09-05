@@ -185,3 +185,4 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmUsers.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmInputReceiveItem.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmJournalReceiveItem.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupItem.resources

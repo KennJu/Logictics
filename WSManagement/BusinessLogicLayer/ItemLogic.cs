@@ -18,7 +18,10 @@ namespace BusinessLogicLayer
         {
             return Items.GetData();
         }
-
+        public DataTable LookupReceiveItem(ItemData iEmploy)
+        {
+            return Items.LookupReceiveItem(iEmploy);
+        }
         public int Insert(ItemData iEmploy)
         {
             return Items.Insert(iEmploy);

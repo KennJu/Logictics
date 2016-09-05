@@ -24,37 +24,29 @@ namespace DataAccessLayer
             }
 
         }
-        //public IList<ItemData> GetAllItem()
-        //{
-        //    try
-        //    {
-        //        string storeName = "Item_GetList";
-        //        DataTable dt = clsDatabase.GetDataTable(storeName, (int)clsDatabase.SqlType.StoredProcedure);
-        //        return MakeItem(dt);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show("Lỗi: " + ex.Message + "\n" + ex.ToString());
-        //        return null;
-        //    }
+        public DataTable LookupReceiveItem(ItemData items)
+        {
+            try
+            {
+                string storeName = "LookUpReceiveItem_GetList";
+                SqlParameter[] SQLParameters = {    new SqlParameter("No_", SqlDbType.NVarChar,50) ,
+                                                    new SqlParameter("Name", SqlDbType.NVarChar, 50) ,
+                                                    new SqlParameter("SearchName", SqlDbType.NVarChar,50) ,
+                                                    new SqlParameter("ItemGroup", SqlDbType.NVarChar,50) ,
+                                                };
+                SQLParameters[0].Value=items.No_;
+                SQLParameters[1].Value = items.Name;
+                SQLParameters[2].Value = items.SearchName;
+                SQLParameters[3].Value = items.ItemGroup;
+               return clsDatabase.GetDataTable(storeName, SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Lỗi: " + ex.Message + "\n" + ex.ToString());
+                return null;
+            }
 
-        //}
-        //public IList<ItemData> MakeItem(DataTable dt)
-        //{
-        //    IList<ItemData> list = new List<ItemData>();
-        //    foreach (DataRow row in dt.Rows)
-        //    {
-        //        list.Add(MakeItem(row));
-        //    }
-        //    return list;
-        //}
-        //public ItemData MakeItem(DataRow row)
-        //{
-        //    int RowID = Convert.ToInt16(row["RowID"].ToString());
-        //    string No_ = row["No_"].ToString();
-        //    string Name = row["Name"].ToString();
-        //    return new ItemData(RowID, No_, Name);
-        //}
+        }
         
         public int Insert(ItemData _Item)
         {
