@@ -18,20 +18,23 @@ namespace WSManagement
         {
             InitializeComponent();
         }
-        public ArrayList arrResult =new ArrayList();
+        public static ArrayList arrResult =new ArrayList();
         Boolean flag = false;
         ArrayList arr ;
         ItemLogic _itemLogic ;
         ItemData _itemInfo;
+        DataTable dt;
         private void frmLookupItem_Load(object sender, EventArgs e)
         {
+            dt = new DataTable();
             _itemLogic= new ItemLogic();
             _itemInfo = new ItemData();
             _itemInfo.No_ = txtNo_.Text;
             _itemInfo.Name = txtName.Text;
             _itemInfo.SearchName = txtSearchName.Text;
-            _itemInfo.ItemGroup = Library.IsDBNull(lookUpItemGroup.EditValue);
-            gridMaster.DataSource = _itemLogic.LookupReceiveItem(_itemInfo);
+            _itemInfo.ItemGroup = Library.IsDBNull(lookUpItemGroup.EditValue); 
+            dt = _itemLogic.LookupReceiveItem(_itemInfo);
+            gridMaster.DataSource = dt;
             ViewMaster.Columns[0].Caption = "Mã Sản Phẩm";
             ViewMaster.Columns[1].Caption = "Tên Sản Phẩm";
             ViewMaster.Columns[2].Caption = "Tên Tìm Nhanh";
@@ -48,13 +51,60 @@ namespace WSManagement
             ViewMaster.OptionsView.ShowAutoFilterRow = true;
             ViewMaster.OptionsView.ColumnAutoWidth = false;
             ViewMaster.BestFitColumns(); 
-        }
-        //SELECT No_,Name,SearchName,Unit,qtyPerUnit,UnitDetail,ItemGroup,NetWeight,
-        //    GrossWeight,Description,UnitImport,UnitExport,UnitStock
+        } 
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void RefreshData()
+        { 
+            _itemInfo = new ItemData();
+            _itemInfo.No_ = txtNo_.Text;
+            _itemInfo.Name = txtName.Text;
+            _itemInfo.SearchName = txtSearchName.Text;
+            _itemInfo.ItemGroup = Library.IsDBNull(lookUpItemGroup.EditValue);
+            gridMaster.DataSource = _itemLogic.LookupReceiveItem(_itemInfo);
+            ViewMaster.BestFitColumns();
+        }
+
+        private void txtNo__EditValueChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+        private void GetItem()
+        {
+            try
+            { 
+                DataRow row = dt.NewRow();
+                arrResult = new ArrayList();
+                if (ViewMaster.FocusedRowHandle < 0) return;
+                row = this.ViewMaster.GetDataRow(this.ViewMaster.FocusedRowHandle);
+                arrResult.Add(row);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                 System.Windows.Forms.MessageBox.Show("Lỗi: " + ex.Message + "\n" + ex.ToString());                
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            GetItem();
+        }
+
+        private void ViewMaster_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                GetItem();
+            }
+        }
+
+        private void ViewMaster_DoubleClick(object sender, EventArgs e)
+        {
+            GetItem();
+        }         
     }
 }

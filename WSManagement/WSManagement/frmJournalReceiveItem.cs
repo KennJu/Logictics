@@ -17,11 +17,11 @@ namespace WSManagement
         public frmJournalReceiveItem()
         { 
             InitializeComponent();
-            LoadDatatoHeader();
-            LoadDataToLine();
+            LoadDatatoHeader(); 
         }
         JournalReceiveHeaderLogic ReceiveHeader;
         JournalReceiveLineLogic ReceiveLine;
+        JournalReceiveLineData ReceiveLineData;
         private int TypeConmand = 0;
         DataTable dtHeader;
      
@@ -32,6 +32,8 @@ namespace WSManagement
         private void LoadDatatoHeader()
         {
             ReceiveHeader = new JournalReceiveHeaderLogic();
+            ReceiveLine = new JournalReceiveLineLogic();
+            ReceiveLineData = new JournalReceiveLineData();
             dtHeader = new DataTable();
             dtHeader=ReceiveHeader.GetData();
             gridHeader.DataSource = dtHeader;
@@ -58,8 +60,14 @@ namespace WSManagement
         }
         private void LoadDataToLine()
         {
-            ReceiveLine = new JournalReceiveLineLogic();
-            gridDetail.DataSource = ReceiveLine.GetData();
+            if (ViewHeader.FocusedRowHandle > 0)
+            {
+                ReceiveLineData.DocumentNo_ = ViewHeader.GetRowCellValue(ViewHeader.FocusedRowHandle, "No_").ToString();
+            }
+            else
+                ReceiveLineData.DocumentNo_ = "";
+
+            gridDetail.DataSource = ReceiveLine.GetLine(ReceiveLineData.DocumentNo_);
             ViewDetail.Columns[0].Visible = false;
             ViewDetail.Columns[1].Visible = false;
             ViewDetail.Columns[2].Caption = "Mã Hàng Hóa";
@@ -78,10 +86,7 @@ namespace WSManagement
             ViewDetail.Columns[15].Caption = "Tổng G.W";
             ViewDetail.Columns[16].Caption = "Hạn Dùng";
             ViewDetail.Columns[17].Caption = "Ghi Chú";
-            ViewDetail.Columns[18].Caption = "User";
-            ViewDetail.Columns[19].Visible = false;
-            ViewDetail.Columns[20].Visible = false;
-            ViewDetail.Columns[21].Visible = false;
+            ViewDetail.Columns[18].Caption = "User"; 
             ViewDetail.OptionsView.ShowAutoFilterRow = true;
             ViewDetail.OptionsView.ColumnAutoWidth = false;
             ViewDetail.BestFitColumns();
@@ -90,7 +95,13 @@ namespace WSManagement
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmInputReceiveItem frm = new frmInputReceiveItem();
+            frm.TypeConmand = 1;
             frm.ShowDialog();
+        }
+
+        private void ViewHeader_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            LoadDataToLine();
         }
     }
 }

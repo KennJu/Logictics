@@ -112,6 +112,7 @@
             this.lookUpItemGroup.Size = new System.Drawing.Size(279, 20);
             this.lookUpItemGroup.StyleController = this.layoutControl2;
             this.lookUpItemGroup.TabIndex = 7;
+            this.lookUpItemGroup.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // txtName
             // 
@@ -120,6 +121,7 @@
             this.txtName.Size = new System.Drawing.Size(279, 20);
             this.txtName.StyleController = this.layoutControl2;
             this.txtName.TabIndex = 6;
+            this.txtName.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // txtNo_
             // 
@@ -128,6 +130,7 @@
             this.txtNo_.Size = new System.Drawing.Size(211, 20);
             this.txtNo_.StyleController = this.layoutControl2;
             this.txtNo_.TabIndex = 5;
+            this.txtNo_.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // txtSearchName
             // 
@@ -136,6 +139,7 @@
             this.txtSearchName.Size = new System.Drawing.Size(211, 20);
             this.txtSearchName.StyleController = this.layoutControl2;
             this.txtSearchName.TabIndex = 4;
+            this.txtSearchName.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // layoutControlGroup2
             // 
@@ -239,6 +243,7 @@
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Chọn";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // layoutControlGroup1
             // 
@@ -332,7 +337,10 @@
             // 
             this.ViewMaster.GridControl = this.gridMaster;
             this.ViewMaster.Name = "ViewMaster";
+            this.ViewMaster.OptionsBehavior.ReadOnly = true;
             this.ViewMaster.OptionsView.ShowGroupPanel = false;
+            this.ViewMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewMaster_KeyDown);
+            this.ViewMaster.DoubleClick += new System.EventHandler(this.ViewMaster_DoubleClick);
             // 
             // frmLookupItem
             // 

@@ -65,8 +65,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelFill = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridMaster = new DevExpress.XtraGrid.GridControl();
-            this.gridDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.viewMaster = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelRight)).BeginInit();
             this.panelRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -107,8 +108,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).BeginInit();
             this.panelFill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewMaster)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRight
@@ -537,30 +540,42 @@
             // 
             // panelFill
             // 
-            this.panelFill.Controls.Add(this.gridMaster);
+            this.panelFill.Controls.Add(this.groupControl1);
             this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFill.Location = new System.Drawing.Point(0, 210);
             this.panelFill.Name = "panelFill";
             this.panelFill.Size = new System.Drawing.Size(907, 363);
             this.panelFill.TabIndex = 6;
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.gridMaster);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(2, 2);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(903, 359);
+            this.groupControl1.TabIndex = 1;
+            this.groupControl1.Text = "Chi Tiết Phiếu Nhập";
+            // 
             // gridMaster
             // 
             this.gridMaster.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridMaster.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridMaster.Location = new System.Drawing.Point(2, 2);
-            this.gridMaster.MainView = this.gridDetail;
+            this.gridMaster.Location = new System.Drawing.Point(2, 21);
+            this.gridMaster.MainView = this.viewMaster;
             this.gridMaster.Name = "gridMaster";
-            this.gridMaster.Size = new System.Drawing.Size(903, 359);
+            this.gridMaster.Size = new System.Drawing.Size(899, 336);
             this.gridMaster.TabIndex = 0;
             this.gridMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridDetail});
+            this.viewMaster});
             // 
-            // gridDetail
+            // viewMaster
             // 
-            this.gridDetail.GridControl = this.gridMaster;
-            this.gridDetail.Name = "gridDetail";
-            this.gridDetail.OptionsView.ShowGroupPanel = false;
+            this.viewMaster.GridControl = this.gridMaster;
+            this.viewMaster.Name = "viewMaster";
+            this.viewMaster.OptionsView.ColumnAutoWidth = false;
+            this.viewMaster.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.viewMaster.OptionsView.ShowGroupPanel = false;
             // 
             // frmInputReceiveItem
             // 
@@ -613,8 +628,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).EndInit();
             this.panelFill.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMaster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewMaster)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,7 +662,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
         private DevExpress.XtraEditors.PanelControl panelFill;
         private DevExpress.XtraGrid.GridControl gridMaster;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridDetail;
+        private DevExpress.XtraGrid.Views.Grid.GridView viewMaster;
         private DevExpress.XtraEditors.DateEdit deDocumentDate;
         private DevExpress.XtraEditors.DateEdit dePostingDate;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
@@ -660,5 +677,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit txtDeliver;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }

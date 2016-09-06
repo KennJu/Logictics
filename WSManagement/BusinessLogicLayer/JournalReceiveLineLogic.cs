@@ -14,9 +14,9 @@ namespace BusinessLogicLayer
         private JournalReceiveLineAccess JournalReceiveLines;
 
         public JournalReceiveLineLogic() { JournalReceiveLines = new JournalReceiveLineAccess(); }
-        public DataTable GetData()
+        public DataTable GetLine(string DocumentNo_)
         {
-            return JournalReceiveLines.GetData();
+            return JournalReceiveLines.GetLine(DocumentNo_);
         }
 
         public int InsertJournalReceiveLine(JournalReceiveLineData iEmploy)

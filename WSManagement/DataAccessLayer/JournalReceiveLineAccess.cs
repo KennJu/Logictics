@@ -16,12 +16,14 @@ namespace DataAccessLayer
         /// </summary>
         /// <param name="dt">Danh sách dữ liệu</param>
         /// <returns>Danh sách Category</returns>
-        public DataTable GetData()
+        public DataTable GetLine(string DocumentNo_)
         {
             try
             {
-                string storeName = "JournalReceiveLine_GetList";
-                return clsDatabase.GetDataTable(storeName, (int)clsDatabase.SqlType.StoredProcedure);
+                string storeName = "JournalReceiveLine_GetLine";
+                SqlParameter[] SQLParameters = { new SqlParameter("DocumentNo_", SqlDbType.NVarChar, 50) };
+                SQLParameters[0].Value = DocumentNo_; 
+                return clsDatabase.GetDataTable(storeName, SQLParameters);
             }
             catch (Exception ex)
             {

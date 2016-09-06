@@ -532,6 +532,8 @@
             // 
             this.ViewHeader.GridControl = this.gridHeader;
             this.ViewHeader.Name = "ViewHeader";
+            this.ViewHeader.OptionsView.ShowGroupPanel = false;
+            this.ViewHeader.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.ViewHeader_FocusedRowChanged);
             // 
             // groupControl2
             // 
@@ -559,6 +561,7 @@
             // 
             this.ViewDetail.GridControl = this.gridDetail;
             this.ViewDetail.Name = "ViewDetail";
+            this.ViewDetail.OptionsView.ShowGroupPanel = false;
             // 
             // frmJournalReceiveItem
             // 

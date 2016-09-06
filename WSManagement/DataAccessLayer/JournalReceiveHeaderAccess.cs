@@ -30,6 +30,22 @@ namespace DataAccessLayer
             }
         }
 
+        public DataTable GetLine(string No_)
+        {
+            try
+            {
+                string storeName = "JournalReceiveHeader_GetReceiveToNo_";
+                SqlParameter[] SQLParameters = { new SqlParameter("No_", SqlDbType.NVarChar, 50) };
+                SQLParameters[0].Value = No_;
+                return clsDatabase.GetDataTable(storeName, SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
+
         public string GetSeries(string Series,string Code)
         {
             try
@@ -63,15 +79,14 @@ namespace DataAccessLayer
                                                 new SqlParameter("Deliver", SqlDbType.NVarChar, 250) ,
                                                 new SqlParameter("CarType", SqlDbType.VarChar, 50) ,
                                                 new SqlParameter("CarNo_", SqlDbType.NVarChar, 50) ,
-                                                new SqlParameter("Driver", SqlDbType.VarChar, 250) ,
-                                                new SqlParameter("DocumentType", SqlDbType.VarChar, 50) ,
+                                                new SqlParameter("Driver", SqlDbType.NVarChar, 250) ,
+                                                new SqlParameter("DocumentType", SqlDbType.Int, 50) ,
                                                 new SqlParameter("EmployeeNo_", SqlDbType.VarChar, 50) ,
                                                 new SqlParameter("Status", SqlDbType.Int, 10) ,
                                                 new SqlParameter("Description", SqlDbType.NVarChar, 250) ,
                                                 new SqlParameter("UserID", SqlDbType.VarChar, 50) ,
                                                 new SqlParameter("LocationNo_", SqlDbType.NVarChar, 50) ,
-                                                new SqlParameter("CreateDate", SqlDbType.DateTime, 11) ,};
-                //SQLParameters[0].Direction = ParameterDirection.Output;
+                                                new SqlParameter("CreateDate", SqlDbType.DateTime, 11) ,}; 
                 SQLParameters[0].Value = _JournalReceiveHeader.No_;
                 SQLParameters[1].Value = _JournalReceiveHeader.SupplierNo_;
                 SQLParameters[2].Value = _JournalReceiveHeader.PostingDate;
