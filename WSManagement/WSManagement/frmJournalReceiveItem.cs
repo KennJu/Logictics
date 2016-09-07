@@ -8,6 +8,8 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
+using System.Collections;
+using DevExpress.Utils;
 using BusinessLogicLayer;
 using DataTransferObject;
 
@@ -26,6 +28,7 @@ namespace WSManagement
         JournalReceiveLineData ReceiveLineData;
         SupplierLogic Supplier;
         DataTable dtHeader;
+        DataTable dtLine;
         private int TypeConmand = 0;
         string _startingNo = "PN";//Series Phiếu nhập        
      
@@ -41,6 +44,7 @@ namespace WSManagement
             ReceiveLineData = new JournalReceiveLineData();
             Supplier = new SupplierLogic();
             dtHeader = new DataTable();
+            dtLine = new DataTable();
             dtHeader=ReceiveHeaderLogic.GetData();
             gridHeader.DataSource = dtHeader;
             //Định dạng GridHeader
@@ -67,27 +71,14 @@ namespace WSManagement
             gridHeader.RepositoryItems.Add(rebutton);
             ViewHeader.Columns["No_"].ColumnEdit = rebutton;
             ViewHeader.Columns["No_"].ColumnEdit.ReadOnly = false;
- 
-            RepositoryItemGridLookUpEdit riCombo = new RepositoryItemGridLookUpEdit();
-            DataTable dtsupplier = new DataTable();
-            dtsupplier = Supplier.GetData();
-            riCombo.DataSource = dtsupplier;
-            riCombo.NullText = "";
-            riCombo.ValueMember = "No_";
-            riCombo.DisplayMember = "Name";
-           // riCombo.View.Columns["No_"].Caption="Mã Nhà Cung Cấp";
-           // riCombo.View.Columns["Name"].Caption = "Tên Nhà Cung Cấp";
-            riCombo.View.OptionsView.ColumnAutoWidth = false;
-            riCombo.View.BestFitColumns();
-            gridHeader.RepositoryItems.Add(riCombo);
-            ViewHeader.Columns["SupplierNo_"].ColumnEdit = riCombo;
-            //   Dim riDate As RepositoryItemDateEdit = New RepositoryItemDateEdit
-            //riDate.ShowClear = False
-            //riDate.ShowToday = True
-            //riDate.EditMask = "dd/MM/yyyy"
-            //riDate.Mask.UseMaskAsDisplayFormat = True
-            //GridView1.Columns("PostingDate").ColumnEdit = riDate
-            //GridView1.Columns("DocumentDate").ColumnEdit = riDate
+
+            rebutton = new RepositoryItemButtonEdit();
+            rebutton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(LookupSupplierNo_);
+            rebutton.Buttons[0].Tag = ViewHeader;
+            rebutton.NullText = "";
+            gridHeader.RepositoryItems.Add(rebutton);
+            ViewHeader.Columns["SupplierNo_"].ColumnEdit = rebutton;
+            ViewHeader.Columns["SupplierNo_"].ColumnEdit.ReadOnly = false;
 
             RepositoryItemDateEdit riDate = new RepositoryItemDateEdit();
             riDate.ShowClear = false;
@@ -103,14 +94,16 @@ namespace WSManagement
         }
         private void LoadDataToLine()
         {
-            if (ViewHeader.FocusedRowHandle > 0)
+            int index = ViewHeader.FocusedRowHandle;
+            DataRow row = dtHeader.NewRow();
+            if (index<0)
             {
-                ReceiveLineData.DocumentNo_ = ViewHeader.GetRowCellValue(ViewHeader.FocusedRowHandle, "No_").ToString();
-            }
-            else
-                ReceiveLineData.DocumentNo_ = "";
-
-            gridDetail.DataSource = ReceiveLineLogic.GetLine(ReceiveLineData.DocumentNo_);
+                return;
+                
+            } 
+            row = this.ViewHeader.GetDataRow(this.ViewHeader.FocusedRowHandle); 
+            //Load TeamPlate Line PN
+            gridDetail.DataSource = ReceiveLineLogic.GetLine(row["No_"].ToString());
             ViewDetail.Columns[0].Visible = false;
             ViewDetail.Columns[1].Visible = false;
             ViewDetail.Columns[2].Caption = "Mã Hàng Hóa";
@@ -130,6 +123,39 @@ namespace WSManagement
             ViewDetail.Columns[16].Caption = "Hạn Dùng";
             ViewDetail.Columns[17].Caption = "Ghi Chú";
             ViewDetail.Columns[18].Caption = "User"; 
+            RepositoryItemButtonEdit rebuttonItem = new RepositoryItemButtonEdit();
+            rebuttonItem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(LookupButtonClickItemNo);
+            rebuttonItem.Buttons[0].Tag = ViewDetail;
+            rebuttonItem.NullText = "";
+            gridDetail.RepositoryItems.Add(rebuttonItem);
+            ViewDetail.Columns["ItemNo_"].ColumnEdit = rebuttonItem;
+            ViewDetail.Columns["ItemNo_"].ColumnEdit.ReadOnly = false;
+
+            ViewDetail.Columns["Quantity"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["Quantity"].DisplayFormat.FormatString = "###,###,###.####";
+
+            ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatString = "###,###,###.####";
+
+            ViewDetail.Columns["VAT"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["VAT"].DisplayFormat.FormatString = "###,###,###.####";
+
+            ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatString = "###,###,###.####"; 
+
+
+            ViewDetail.Columns["NetWeight"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["NetWeight"].DisplayFormat.FormatString = "###,###,###.####"; 
+            ViewDetail.Columns["TotalNet"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["TotalNet"].DisplayFormat.FormatString = "###,###,##0.####";
+
+            ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatString = "###,###,###.####";
+            ViewDetail.Columns["TotalGross"].DisplayFormat.FormatType = FormatType.Numeric;
+            ViewDetail.Columns["TotalGross"].DisplayFormat.FormatString = "###,###,##0.####";
+
+            ViewDetail.Columns["ItemNo_"].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:###,###,###}");   
+         
             ViewDetail.OptionsView.ShowAutoFilterRow = true;
             ViewDetail.OptionsView.ColumnAutoWidth = false;
             ViewDetail.BestFitColumns();
@@ -177,23 +203,24 @@ namespace WSManagement
         {
             try
             {
-                if (Library.IsZeroNull(ViewHeader.GetRowCellValue(ViewHeader.FocusedRowHandle, "RowID")) > 0)
+                frmLookupSupplier frmChooseItem = new frmLookupSupplier();
+                ArrayList arrItem = new ArrayList();
+                frmLookupItem.arrResult = null;
+                frmChooseItem.ShowDialog();
+                arrItem = frmLookupSupplier.arrResult;
+                if (arrItem != null && arrItem.Count > 0)
                 {
-                    Library.Message("Không thể thay đổi mã hiện có!", "Cảnh Báo - " + this.Text);
-                    return;
-                }
-                frmLookupSeries LookupSeriesfrm = new frmLookupSeries();
-                frmLookupSeries._Code = this._startingNo;
-                LookupSeriesfrm.ShowDialog();
-                if (frmLookupSeries.strNo_ != "")
-                {
-                    int index = ViewHeader.FocusedRowHandle;
-                    if (IsNewRow(index, ViewHeader))
+                    foreach (DataRow row in arrItem)
                     {
-                        ViewHeader.AddNewRow();
+                        int index = ViewHeader.FocusedRowHandle;
+                        if (this.IsNewRow(index, this.ViewHeader))
+                        {
+                            ViewHeader.AddNewRow();
+                        }
+                        ViewHeader.SetRowCellValue(index, "SupplierNo_", Library.IsDBNull(row["No_"]));
+                        ViewHeader.SetRowCellValue(index, "Name", Library.IsDBNull(row["Name"]));
                     }
-                    ViewHeader.SetRowCellValue(index, ViewHeader.Columns["No_"].FieldName, frmLookupSeries.strNo_);
-                }
+                } 
             }
             catch (Exception ex)
             {
@@ -265,10 +292,9 @@ namespace WSManagement
                 Library.Message("Lỗi: "+ex.Message, "Cảnh Báo" + this.Text); 
             }
             if (kq == 1)
-            {
-                //gridMaster.DataSource = ReceiveHeaderLogic.GetData();
+            { 
                 TypeConmand = 0;
-                Library.Message("Đã cập nhật dữ liệu thành công.", "Thông Báo - " + this.Text);
+                //Library.Message("Đã cập nhật dữ liệu thành công.", "Thông Báo - " + this.Text);
             }
         }
         private void FillControlToDT(DataRow row)
@@ -296,7 +322,149 @@ namespace WSManagement
             int index=e.RowHandle;
             ViewHeader.SetRowCellValue(index, "DocumentDate", DateTime.Now);
             ViewHeader.SetRowCellValue(index, "PostingDate", DateTime.Now);
-            ViewHeader.SetRowCellValue(index, "EmployeeNo", SystemWS.Login);            
+            ViewHeader.SetRowCellValue(index, "UserID", SystemWS.Login);            
+        }
+        private void LookupButtonClickItemNo(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int indexHeader = ViewHeader.FocusedRowHandle;
+            DataRow rowHeader = dtHeader.NewRow();
+            if (indexHeader < 0)
+            {
+                return;
+
+            }
+            rowHeader = this.ViewHeader.GetDataRow(this.ViewHeader.FocusedRowHandle); 
+
+            frmLookupItem frmChooseItem = new frmLookupItem();
+            ArrayList arrItem = new ArrayList();
+            frmLookupItem.arrResult = null;
+            frmChooseItem.ShowDialog();
+            arrItem = frmLookupItem.arrResult;
+            if (arrItem != null && arrItem.Count > 0)
+            {
+                foreach (DataRow row in arrItem)
+                {
+                    int index = ViewDetail.FocusedRowHandle;
+                    if (this.IsNewRow(index, this.ViewDetail))
+                    {
+                        ViewDetail.AddNewRow();
+                    }
+                    ViewDetail.SetRowCellValue(index, "DocumentNo_", rowHeader["No_"]);
+                    ViewDetail.SetRowCellValue(index, "ItemNo_", Library.IsDBNull(row["No_"]));
+                    ViewDetail.SetRowCellValue(index, "Name", Library.IsDBNull(row["Name"]));
+                    ViewDetail.SetRowCellValue(index, "Unit", Library.IsDBNull(row["Unit"]));
+                    ViewDetail.SetRowCellValue(index, "NetWeight", Library.IsDBNull(row["NetWeight"]));
+                    ViewDetail.SetRowCellValue(index, "GrossWeight", Library.IsDBNull(row["GrossWeight"]));
+                    ViewDetail.SetRowCellValue(index, "UserID", SystemWS.Login);
+                }
+            }
+        }
+        private void FillLineToDT(DataRow row)
+        {
+            ReceiveLineData = new JournalReceiveLineData ();
+            ReceiveLineData.RowID = Library.IsZeroNull(row["RowID"]);
+            ReceiveLineData.DocumentNo_= Library.IsDBNull(row["DocumentNo_"]);
+            ReceiveLineData.ItemNo_= Library.IsDBNull(row["ItemNo_"]);
+            ReceiveLineData.Type = 0;
+            ReceiveLineData.Size= Library.IsDBNull(row["Size"]);
+            ReceiveLineData.LotNo_ = Library.IsDBNull(row["LotNo_"]);
+            ReceiveLineData.Quantity = Library.IsZeroNull(row["Quantity"]);
+            ReceiveLineData.Unit = Library.IsDBNull(row["Unit"]);
+            ReceiveLineData.QtyperUnit = 0;
+            ReceiveLineData.QtytoPakge = 0;
+            ReceiveLineData.UnitPakge = Library.IsDBNull(row["Unit"]);
+            ReceiveLineData.UnitPrice = Library.IsZeroDecimal(row["UnitPrice"]); ; ;
+            ReceiveLineData.VAT= Library.IsZeroDecimal(row["VAT"]);
+            ReceiveLineData.LineDiscount = Library.IsZeroDecimal(row["LineDiscount"]);
+            ReceiveLineData.QtyInPallet = Library.IsZeroDecimal(row["QtyInPallet"]);
+            ReceiveLineData.NetWeight = Library.IsZeroDecimal(row["NetWeight"]);
+            ReceiveLineData.TotalNet = Library.IsZeroDecimal(row["TotalNet"]);
+            ReceiveLineData.GrossWeight= Library.IsZeroDecimal(row["GrossWeight"]);
+            ReceiveLineData.TotalGross= Library.IsZeroDecimal(row["TotalGross"]);
+            ReceiveLineData.Description = Library.IsDBNull(row["Description"]); 
+            ReceiveLineData.Status = 0;
+            ReceiveLineData .UserID = SystemWS.Login;
+            ReceiveLineData.Note= "";
+            ReceiveLineData.PostingDate = DateTime.Now;
+            ReceiveLineData.CustomDate = DateTime.Now;
+        }
+        private void ViewDetail_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            int kq = 0;
+            string strtemp;
+            for (int i = 0; i < ViewHeader.Columns.Count - 1; i++)
+            {
+                strtemp = ViewHeader.Columns[i].Name.Substring(3);
+                Object obj = ViewHeader.GetRowCellValue(e.RowHandle, strtemp);
+                if (strtemp.Equals("Quantity") || strtemp.Equals("Unit") || strtemp.Equals("UnitPrice"))
+                {
+                    if (obj is DBNull)
+                    {
+                        e.ErrorText = "Hãy nhập " + ViewHeader.Columns[i].ToString() + " \n";
+                        e.Valid = false;
+                        ViewHeader.FocusedColumn = ViewHeader.Columns[strtemp];
+                        ViewHeader.ShowEditor();
+                        return;
+                    }
+                }
+            }
+            try
+            {
+                DataRow row = ViewDetail.GetDataRow(e.RowHandle);
+                if (row == null)
+                {
+                    return;
+                }
+                FillLineToDT(row);
+
+                if (ReceiveLineData.RowID == 0)
+                {
+                    //Insert
+                    kq = ReceiveLineLogic.InsertJournalReceiveLine(ReceiveLineData);
+                }
+                else
+                {
+                    //Update
+                    kq = ReceiveLineLogic.UpdateJournalReceiveLine(ReceiveLineData);
+                }
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
+            }
+            if (kq == 1)
+            {
+                TypeConmand = 0;
+                //Library.Message("Đã cập nhật dữ liệu thành công.", "Thông Báo - " + this.Text);
+            }
+        }
+
+        private void ViewDetail_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            this.ViewDetail.SetRowCellValue(e.RowHandle, "Amount", 0);
+            this.ViewDetail.SetRowCellValue(e.RowHandle, "ExpiryDate", DateTime.Now.AddDays(30));
+            this.ViewDetail.SetRowCellValue(e.RowHandle, "PostingDate", DateTime.Now);
+            this.ViewDetail.SetRowCellValue(e.RowHandle, "CustomeDate", DateTime.Now);
+            this.ViewDetail.SetRowCellValue(e.RowHandle, "UserID", SystemWS.Login);
+        }
+
+        private void ViewDetail_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
+        {
+            e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.DisplayError;
+            e.WindowCaption = "Thông Báo";
+        }
+
+        private void ViewDetail_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        { 
+            //switch (e.Column.Name)
+            //{
+            //    case "Amount":
+            //        Decimal netWeight = Library.IsZeroNull(this.ViewDetail.GetRowCellValue(e.RowHandle, "NetWeight"));
+            //        this.ViewDetail.SetRowCellValue(e.RowHandle, "TotalGross", (e.Value * netWeight) - (e.Value * netWeight * 100));
+            //        break;
+            //    default:
+            //        break;
+            //}
         }
     }
 }

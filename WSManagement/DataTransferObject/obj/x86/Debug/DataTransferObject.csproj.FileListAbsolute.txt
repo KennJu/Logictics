@@ -39,7 +39,6 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObje
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.dll
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.pdb
-C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.dll
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataTransferObject\bin\Debug\DataTransferObject.pdb
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataTransferObject\obj\x86\Debug\DataTransferObject.Properties.Resources.resources

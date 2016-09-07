@@ -17,7 +17,12 @@ namespace BusinessLogicLayer
         public DataTable GetData()
         {
             return Supplier.GetData();
+        }
+        public DataTable GetByCondition(SupplierData _supplier)
+        {
+            return Supplier.GetByCondition(_supplier);
         }  
+
         public int Insert(SupplierData iSupplier)
         {
             return Supplier.Insert(iSupplier);

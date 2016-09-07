@@ -27,26 +27,47 @@ namespace DataAccessLayer
                 return null;
             }
         }
- 
+        public DataTable  GetByCondition(SupplierData _supplier)
+        {
+            try
+            {
+                string storeName = "Supplier_GetByCondition";
+                SqlParameter[] SQLParameters = {    new SqlParameter("No_", SqlDbType.NVarChar,50) ,
+                                                    new SqlParameter("Name", SqlDbType.NVarChar, 250) ,
+                                                    new SqlParameter("SearchName", SqlDbType.NVarChar,250) ,
+                                                    new SqlParameter("Address", SqlDbType.NVarChar,250) ,
+                                                };
+                SQLParameters[0].Value = _supplier.No_;
+                SQLParameters[1].Value = _supplier.Name;
+                SQLParameters[2].Value = _supplier.SearchName;
+                SQLParameters[3].Value = _supplier.Address;
+                return clsDatabase.GetDataTable(storeName, SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
         public int Insert(SupplierData _Supplier)
         {
             try
             {
                 SqlParameter[] SQLParameter = { new SqlParameter("@No_", SqlDbType.VarChar,20) ,
-                                            new SqlParameter("@No_2", SqlDbType.VarChar,20) ,
-                                            new SqlParameter("@Name", SqlDbType.NVarChar,250) ,
-                                            new SqlParameter("@SearchName", SqlDbType.NVarChar,100) ,
-                                            new SqlParameter("@Country", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@Address", SqlDbType.VarChar,250) ,
-                                            new SqlParameter("@Phone", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@Fax", SqlDbType.VarChar,100) ,
-                                            new SqlParameter("@Email", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@Website", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@Contact", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@ContactPhone", SqlDbType.VarChar,50) ,
-                                            new SqlParameter("@PostingDate", SqlDbType.DateTime,11) ,
-                                            new SqlParameter("@UserID", SqlDbType.VarChar,20) ,
-                                            new SqlParameter("@Status", SqlDbType.Bit,1) 
+                                                new SqlParameter("@No_2", SqlDbType.VarChar,20) ,
+                                                new SqlParameter("@Name", SqlDbType.NVarChar,250) ,
+                                                new SqlParameter("@SearchName", SqlDbType.NVarChar,100) ,
+                                                new SqlParameter("@Country", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@Address", SqlDbType.VarChar,250) ,
+                                                new SqlParameter("@Phone", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@Fax", SqlDbType.VarChar,100) ,
+                                                new SqlParameter("@Email", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@Website", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@Contact", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@ContactPhone", SqlDbType.VarChar,50) ,
+                                                new SqlParameter("@PostingDate", SqlDbType.DateTime,11) ,
+                                                new SqlParameter("@UserID", SqlDbType.VarChar,20) ,
+                                                new SqlParameter("@Status", SqlDbType.Bit,1) 
                                           };
                 SQLParameter[0].Value = _Supplier.No_;
                 SQLParameter[1].Value = _Supplier.No_2;

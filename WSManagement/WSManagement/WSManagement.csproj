@@ -140,6 +140,12 @@
     <Compile Include="frmJournalReceiveItem.Designer.cs">
       <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lookup\frmLookupSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\frmLookupSupplier.Designer.cs">
+      <DependentUpon>frmLookupSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lookup\frmLookupSeries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJournalReceiveItem.resx">
       <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\frmLookupSupplier.resx">
+      <DependentUpon>frmLookupSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lookup\frmLookupSeries.resx">
       <DependentUpon>frmLookupSeries.cs</DependentUpon>

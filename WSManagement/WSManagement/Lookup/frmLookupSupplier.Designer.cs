@@ -1,6 +1,6 @@
 ﻿namespace WSManagement
 {
-    partial class frmLookupItem
+    partial class frmLookupSupplier
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLookupItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLookupSupplier));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.lookUpItemGroup = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.txtNo_ = new DevExpress.XtraEditors.TextEdit();
             this.txtSearchName = new DevExpress.XtraEditors.TextEdit();
@@ -39,7 +39,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -56,7 +56,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpItemGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNo_.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchName.Properties)).BeginInit();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -91,7 +91,7 @@
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.lookUpItemGroup);
+            this.layoutControl2.Controls.Add(this.txtAddress);
             this.layoutControl2.Controls.Add(this.txtName);
             this.layoutControl2.Controls.Add(this.txtNo_);
             this.layoutControl2.Controls.Add(this.txtSearchName);
@@ -103,40 +103,37 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // lookUpItemGroup
+            // txtAddress
             // 
-            this.lookUpItemGroup.Location = new System.Drawing.Point(395, 36);
-            this.lookUpItemGroup.Name = "lookUpItemGroup";
-            this.lookUpItemGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpItemGroup.Size = new System.Drawing.Size(279, 20);
-            this.lookUpItemGroup.StyleController = this.layoutControl2;
-            this.lookUpItemGroup.TabIndex = 7;
-            this.lookUpItemGroup.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
+            this.txtAddress.Location = new System.Drawing.Point(386, 36);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(288, 20);
+            this.txtAddress.StyleController = this.layoutControl2;
+            this.txtAddress.TabIndex = 8;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(395, 12);
+            this.txtName.Location = new System.Drawing.Point(386, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(279, 20);
+            this.txtName.Size = new System.Drawing.Size(288, 20);
             this.txtName.StyleController = this.layoutControl2;
             this.txtName.TabIndex = 6;
             this.txtName.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // txtNo_
             // 
-            this.txtNo_.Location = new System.Drawing.Point(96, 12);
+            this.txtNo_.Location = new System.Drawing.Point(87, 12);
             this.txtNo_.Name = "txtNo_";
-            this.txtNo_.Size = new System.Drawing.Size(211, 20);
+            this.txtNo_.Size = new System.Drawing.Size(220, 20);
             this.txtNo_.StyleController = this.layoutControl2;
             this.txtNo_.TabIndex = 5;
             this.txtNo_.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
             // 
             // txtSearchName
             // 
-            this.txtSearchName.Location = new System.Drawing.Point(96, 36);
+            this.txtSearchName.Location = new System.Drawing.Point(87, 36);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(211, 20);
+            this.txtSearchName.Size = new System.Drawing.Size(220, 20);
             this.txtSearchName.StyleController = this.layoutControl2;
             this.txtSearchName.TabIndex = 4;
             this.txtSearchName.EditValueChanged += new System.EventHandler(this.txtNo__EditValueChanged);
@@ -150,7 +147,7 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem7});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(686, 71);
@@ -165,7 +162,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(299, 27);
             this.layoutControlItem3.Text = "Tên Tìm Nhanh";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 13);
             // 
             // layoutControlItem4
             // 
@@ -175,7 +172,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(299, 24);
             this.layoutControlItem4.Text = "Mã Sản Phẩm:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 13);
             // 
             // layoutControlItem5
             // 
@@ -185,17 +182,17 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(367, 24);
             this.layoutControlItem5.Text = "Tên Sản Phẩm:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 13);
             // 
-            // layoutControlItem6
+            // layoutControlItem7
             // 
-            this.layoutControlItem6.Control = this.lookUpItemGroup;
-            this.layoutControlItem6.CustomizationFormText = "Nhóm Sản Phẩm:";
-            this.layoutControlItem6.Location = new System.Drawing.Point(299, 24);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(367, 27);
-            this.layoutControlItem6.Text = "Nhóm Sản Phẩm:";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlItem7.Control = this.txtAddress;
+            this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
+            this.layoutControlItem7.Location = new System.Drawing.Point(299, 24);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(367, 27);
+            this.layoutControlItem7.Text = "Địa Chỉ:";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 13);
             // 
             // panelControl2
             // 
@@ -342,7 +339,7 @@
             this.ViewMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewMaster_KeyDown);
             this.ViewMaster.DoubleClick += new System.EventHandler(this.ViewMaster_DoubleClick);
             // 
-            // frmLookupItem
+            // frmLookupSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -351,14 +348,14 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "frmLookupItem";
-            this.Text = "frmLookupItem";
-            this.Load += new System.EventHandler(this.frmLookupItem_Load);
+            this.Name = "frmLookupSupplier";
+            this.Text = "Nhà Cung Cấp";
+            this.Load += new System.EventHandler(this.frmLookupSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpItemGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNo_.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchName.Properties)).EndInit();
@@ -366,7 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -407,7 +404,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpItemGroup;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

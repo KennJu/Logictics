@@ -219,3 +219,5 @@ C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Deb
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.csproj.GenerateResource.Cache
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.exe.licenses
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupSeries.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupSeries.resources
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupSupplier.resources

@@ -61,3 +61,4 @@ C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataAccessLayer\obj\x86\
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csproj.GenerateResource.Cache
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.dll
 C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.pdb
+C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\DataAccessLayer\obj\x86\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
