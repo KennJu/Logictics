@@ -68,6 +68,7 @@ namespace DataAccessLayer
                 return null;
             }
         } 
+
         public int Insert(JournalReceiveHeaderData _JournalReceiveHeader)
         {
             try

@@ -43,6 +43,9 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lookUpLocation = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).BeginInit();
@@ -55,6 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpLocation.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControlGroup1
@@ -255,11 +261,40 @@
             this.layoutControlItem5.TextToControlDistance = 0;
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.CustomizationFormText = "Kho";
+            this.layoutControlItem6.Location = new System.Drawing.Point(466, 0);
+            this.layoutControlItem6.Name = "layoutControlItem4";
+            this.layoutControlItem6.Size = new System.Drawing.Size(199, 24);
+            this.layoutControlItem6.Text = "Kho";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(94, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.CustomizationFormText = "Kho";
+            this.layoutControlItem7.Location = new System.Drawing.Point(466, 0);
+            this.layoutControlItem7.Name = "layoutControlItem4";
+            this.layoutControlItem7.Size = new System.Drawing.Size(199, 24);
+            this.layoutControlItem7.Text = "Kho";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(94, 13);
+            // 
+            // lookUpLocation
+            // 
+            this.lookUpLocation.Location = new System.Drawing.Point(375, 228);
+            this.lookUpLocation.Name = "lookUpLocation";
+            this.lookUpLocation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpLocation.Size = new System.Drawing.Size(98, 20);
+            this.lookUpLocation.StyleController = this.layoutControl1;
+            this.lookUpLocation.TabIndex = 8;
+            // 
             // ScreenChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 477);
+            this.Controls.Add(this.lookUpLocation);
             this.Controls.Add(this.panelTop);
             this.Name = "ScreenChart";
             this.Text = "ScreenChart";
@@ -275,6 +310,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpLocation.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +334,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.LookUpEdit lookUpLocation;
     }
 }

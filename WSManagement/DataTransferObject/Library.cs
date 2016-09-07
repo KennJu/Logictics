@@ -97,6 +97,18 @@ namespace DataTransferObject
 
                 return 0;
             }
+        }
+        public static int IsZeroNull(object obj)
+        {
+            try
+            {
+                return Convert.ToInt16(obj);
+            }
+            catch
+            {
+
+                return 0;
+            }
         } 
         public static void LoadDataToLookup(DevExpress.XtraEditors.LookUpEdit lookUp, DataTable dt, string display, string value)
         {

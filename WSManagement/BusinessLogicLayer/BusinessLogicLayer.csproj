@@ -65,6 +65,7 @@
     <Compile Include="JournalReceiveHeaderLogic.cs" />
     <Compile Include="JournalReceiveLineLogic.cs" />
     <Compile Include="LoginLogic.cs" />
+    <Compile Include="NoSeriesLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupplierLogic.cs" />
     <Compile Include="UnitOfMeasureLogic.cs" />

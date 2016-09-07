@@ -206,6 +206,7 @@ namespace WSManagement
             gridMaster.RepositoryItems.Add(rebuttonItem);
             viewMaster.Columns["ItemNo_"].ColumnEdit = rebuttonItem;
             viewMaster.Columns["ItemNo_"].ColumnEdit.ReadOnly = false;
+
             viewMaster.OptionsView.ShowAutoFilterRow = true;
             viewMaster.OptionsView.ColumnAutoWidth = false;
             viewMaster.BestFitColumns();
@@ -234,5 +235,56 @@ namespace WSManagement
                 return false;
             }
         }
+
+        private void viewMaster_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            string strtemp;
+            for (int i = 0; i < viewMaster.Columns.Count-1; i++)
+            {
+                strtemp = viewMaster.Columns[i].Name.Substring(3);
+                Object obj = viewMaster.GetRowCellValue(e.RowHandle, strtemp);
+                if (strtemp.Equals("Quantity"))
+                {
+                    if (obj is DBNull)
+                    {
+                        e.ErrorText = "Hãy nhập " + viewMaster.Columns[i].ToString()+" \n";
+                        e.Valid = false;
+                        viewMaster.FocusedColumn = viewMaster.Columns[strtemp];
+                        viewMaster.ShowEditor();
+                        return;
+                    }
+                }
+            }
+          
+        } 
+        private void viewMaster_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            int index = Library.IsZero(this.viewMaster.FocusedRowHandle);
+            int status = Library.IsZeroNull(this.viewMaster.GetRowCellValue(index, "Status"));
+            e.Cancel = true;
+            switch (status)
+            {
+                case 1:
+                    e.Cancel=true;
+                    break;
+                case 2:
+                    e.Cancel = true;
+                    break;
+                case 3:
+                    e.Cancel = true;
+                    break;
+                case 0:
+                    e.Cancel=false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void viewMaster_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
+        {
+              e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.DisplayError;
+              e.WindowCaption = "Thông Báo";
+        } 
     }
 }

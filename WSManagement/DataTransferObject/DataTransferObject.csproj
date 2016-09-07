@@ -90,6 +90,7 @@
     <Compile Include="LoginData.cs" />
     <Compile Include="LotNo_Data.cs" />
     <Compile Include="MainFunctionData.cs" />
+    <Compile Include="NoSeriesData.cs" />
     <Compile Include="QtyperUnitData.cs" />
     <Compile Include="SupplierData.cs" />
     <Compile Include="SystemWS.cs" />

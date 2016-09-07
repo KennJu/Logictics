@@ -41,7 +41,6 @@
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.txtDeliver = new DevExpress.XtraEditors.TextEdit();
             this.lookUpSupplierNo_ = new DevExpress.XtraEditors.LookUpEdit();
-            this.btnAddItem = new DevExpress.XtraEditors.SimpleButton();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
             this.deDocumentDate = new DevExpress.XtraEditors.DateEdit();
             this.dePostingDate = new DevExpress.XtraEditors.DateEdit();
@@ -61,7 +60,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelFill = new DevExpress.XtraEditors.PanelControl();
@@ -103,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).BeginInit();
@@ -241,14 +238,13 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(907, 210);
+            this.panelTop.Size = new System.Drawing.Size(907, 175);
             this.panelTop.TabIndex = 5;
             // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.txtDeliver);
             this.layoutControl2.Controls.Add(this.lookUpSupplierNo_);
-            this.layoutControl2.Controls.Add(this.btnAddItem);
             this.layoutControl2.Controls.Add(this.txtDescription);
             this.layoutControl2.Controls.Add(this.deDocumentDate);
             this.layoutControl2.Controls.Add(this.dePostingDate);
@@ -261,7 +257,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(903, 206);
+            this.layoutControl2.Size = new System.Drawing.Size(903, 171);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -285,18 +281,6 @@
             this.lookUpSupplierNo_.Size = new System.Drawing.Size(201, 20);
             this.lookUpSupplierNo_.StyleController = this.layoutControl2;
             this.lookUpSupplierNo_.TabIndex = 29;
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Appearance.Options.UseFont = true;
-            this.btnAddItem.Location = new System.Drawing.Point(24, 139);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(274, 36);
-            this.btnAddItem.StyleController = this.layoutControl2;
-            this.btnAddItem.TabIndex = 28;
-            this.btnAddItem.Text = "Thêm Sản Phẩm Cho Phiếu Nhập";
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // txtDescription
             // 
@@ -387,7 +371,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(903, 206);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(903, 171);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -404,12 +388,11 @@
             this.layoutControlItem10,
             this.layoutControlItem11,
             this.emptySpaceItem1,
-            this.layoutControlItem15,
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(883, 186);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(883, 151);
             this.layoutControlGroup2.Text = "Thông tin phiếu nhập";
             // 
             // layoutControlItem16
@@ -496,27 +479,11 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(278, 96);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(581, 47);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(859, 12);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.btnAddItem;
-            this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem15.MaxSize = new System.Drawing.Size(0, 40);
-            this.layoutControlItem15.MinSize = new System.Drawing.Size(170, 40);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(278, 47);
-            this.layoutControlItem15.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem15.Text = "layoutControlItem15";
-            this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem15.TextToControlDistance = 0;
-            this.layoutControlItem15.TextVisible = false;
             // 
             // layoutControlItem2
             // 
@@ -542,9 +509,9 @@
             // 
             this.panelFill.Controls.Add(this.groupControl1);
             this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(0, 210);
+            this.panelFill.Location = new System.Drawing.Point(0, 175);
             this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(907, 363);
+            this.panelFill.Size = new System.Drawing.Size(907, 398);
             this.panelFill.TabIndex = 6;
             // 
             // groupControl1
@@ -553,7 +520,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(903, 359);
+            this.groupControl1.Size = new System.Drawing.Size(903, 394);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Chi Tiết Phiếu Nhập";
             // 
@@ -564,7 +531,7 @@
             this.gridMaster.Location = new System.Drawing.Point(2, 21);
             this.gridMaster.MainView = this.viewMaster;
             this.gridMaster.Name = "gridMaster";
-            this.gridMaster.Size = new System.Drawing.Size(899, 336);
+            this.gridMaster.Size = new System.Drawing.Size(899, 371);
             this.gridMaster.TabIndex = 0;
             this.gridMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewMaster});
@@ -576,6 +543,9 @@
             this.viewMaster.OptionsView.ColumnAutoWidth = false;
             this.viewMaster.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.viewMaster.OptionsView.ShowGroupPanel = false;
+            this.viewMaster.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.viewMaster_ShowingEditor);
+            this.viewMaster.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.viewMaster_InvalidRowException);
+            this.viewMaster.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.viewMaster_ValidateRow);
             // 
             // frmInputReceiveItem
             // 
@@ -623,7 +593,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelFill)).EndInit();
@@ -668,11 +637,9 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraEditors.SimpleButton btnAddItem;
         private DevExpress.XtraEditors.TextEdit txtDescription;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraEditors.LookUpEdit lookUpSupplierNo_;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit txtDeliver;
