@@ -31,18 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJournalReceiveItem));
             this.panelRight = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.bnExit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+            this.bnDeliverToLocation = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChange = new DevExpress.XtraEditors.SimpleButton();
+            this.btnApproval = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelTop = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpSupplier = new DevExpress.XtraEditors.LookUpEdit();
@@ -73,10 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -120,10 +121,11 @@
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.bnExit);
-            this.layoutControl2.Controls.Add(this.btnDelete);
-            this.layoutControl2.Controls.Add(this.btnEdit);
-            this.layoutControl2.Controls.Add(this.btnAdd);
+            this.layoutControl2.Controls.Add(this.btnPrint);
+            this.layoutControl2.Controls.Add(this.bnDeliverToLocation);
+            this.layoutControl2.Controls.Add(this.btnCancel);
+            this.layoutControl2.Controls.Add(this.btnChange);
+            this.layoutControl2.Controls.Add(this.btnApproval);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(2, 2);
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -134,58 +136,73 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // bnExit
+            // btnPrint
             // 
-            this.bnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnExit.Appearance.Options.UseFont = true;
-            this.bnExit.Image = ((System.Drawing.Image)(resources.GetObject("bnExit.Image")));
-            this.bnExit.Location = new System.Drawing.Point(12, 132);
-            this.bnExit.Name = "bnExit";
-            this.bnExit.Size = new System.Drawing.Size(152, 36);
-            this.bnExit.StyleController = this.layoutControl2;
-            this.bnExit.TabIndex = 8;
-            this.bnExit.Text = "&Đóng";
-            this.bnExit.Visible = false;
+            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Appearance.Options.UseFont = true;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.Location = new System.Drawing.Point(12, 132);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(152, 38);
+            this.btnPrint.StyleController = this.layoutControl2;
+            this.btnPrint.TabIndex = 10;
+            this.btnPrint.Text = "&In phiếu nhập";
+            this.btnPrint.Visible = false;
             // 
-            // btnDelete
+            // bnDeliverToLocation
             // 
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(12, 92);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(152, 36);
-            this.btnDelete.StyleController = this.layoutControl2;
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "&Hủy Phiếu";
+            this.bnDeliverToLocation.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnDeliverToLocation.Appearance.Options.UseFont = true;
+            this.bnDeliverToLocation.Image = ((System.Drawing.Image)(resources.GetObject("bnDeliverToLocation.Image")));
+            this.bnDeliverToLocation.Location = new System.Drawing.Point(12, 174);
+            this.bnDeliverToLocation.Name = "bnDeliverToLocation";
+            this.bnDeliverToLocation.Size = new System.Drawing.Size(152, 36);
+            this.bnDeliverToLocation.StyleController = this.layoutControl2;
+            this.bnDeliverToLocation.TabIndex = 8;
+            this.bnDeliverToLocation.Text = "&Phân bổ vào kho";
+            this.bnDeliverToLocation.Visible = false;
             // 
-            // btnEdit
+            // btnCancel
             // 
-            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Appearance.Options.UseFont = true;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(12, 52);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(152, 36);
-            this.btnEdit.StyleController = this.layoutControl2;
-            this.btnEdit.TabIndex = 5;
-            this.btnEdit.Text = "&Sửa";
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(12, 92);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(152, 36);
+            this.btnCancel.StyleController = this.layoutControl2;
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "&Hủy Phiếu";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnAdd
+            // btnChange
             // 
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Appearance.Options.UseFont = true;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.btnAdd.Location = new System.Drawing.Point(12, 12);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(152, 36);
-            this.btnAdd.StyleController = this.layoutControl2;
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "&Thêm";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnChange.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Appearance.Options.UseFont = true;
+            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
+            this.btnChange.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnChange.Location = new System.Drawing.Point(12, 52);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(152, 36);
+            this.btnChange.StyleController = this.layoutControl2;
+            this.btnChange.TabIndex = 5;
+            this.btnChange.Text = "&Mở Lại";
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // btnApproval
+            // 
+            this.btnApproval.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApproval.Appearance.Options.UseFont = true;
+            this.btnApproval.Image = ((System.Drawing.Image)(resources.GetObject("btnApproval.Image")));
+            this.btnApproval.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnApproval.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.btnApproval.Location = new System.Drawing.Point(12, 12);
+            this.btnApproval.Name = "btnApproval";
+            this.btnApproval.Size = new System.Drawing.Size(152, 36);
+            this.btnApproval.StyleController = this.layoutControl2;
+            this.btnApproval.TabIndex = 4;
+            this.btnApproval.Text = "&Duyệt";
+            this.btnApproval.Click += new System.EventHandler(this.btnApproval_Click);
             // 
             // layoutControlGroup2
             // 
@@ -196,10 +213,10 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.emptySpaceItem5,
             this.layoutControlItem10,
             this.emptySpaceItem6,
-            this.emptySpaceItem8});
+            this.emptySpaceItem8,
+            this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(176, 504);
@@ -208,7 +225,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.btnAdd;
+            this.layoutControlItem6.Control = this.btnApproval;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem6";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(0, 40);
@@ -224,7 +241,7 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.btnEdit;
+            this.layoutControlItem7.Control = this.btnChange;
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem7";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(0, 40);
@@ -240,7 +257,7 @@
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.Control = this.btnDelete;
+            this.layoutControlItem8.Control = this.btnCancel;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(0, 40);
@@ -254,21 +271,11 @@
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
             // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 160);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(156, 14);
-            this.emptySpaceItem5.Text = "emptySpaceItem5";
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.bnExit;
+            this.layoutControlItem10.Control = this.bnDeliverToLocation;
             this.layoutControlItem10.CustomizationFormText = "layoutControlItem10";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 162);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(87, 40);
             this.layoutControlItem10.Name = "layoutControlItem10";
@@ -284,9 +291,9 @@
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 174);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 202);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(156, 296);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(156, 270);
             this.emptySpaceItem6.Text = "emptySpaceItem6";
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -294,11 +301,22 @@
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
-            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 470);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 472);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(156, 14);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(156, 12);
             this.emptySpaceItem8.Text = "emptySpaceItem8";
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.btnPrint;
+            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(156, 42);
+            this.layoutControlItem3.Text = "layoutControlItem3";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // panelTop
             // 
@@ -569,10 +587,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).EndInit();
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -610,15 +628,14 @@
 
         private DevExpress.XtraEditors.PanelControl panelRight;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraEditors.SimpleButton bnExit;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnEdit;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
+        private DevExpress.XtraEditors.SimpleButton bnDeliverToLocation;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.SimpleButton btnChange;
+        private DevExpress.XtraEditors.SimpleButton btnApproval;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
@@ -644,6 +661,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.LookUpEdit lookUpSupplier;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.SimpleButton btnPrint;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         
 
     }

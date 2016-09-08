@@ -339,6 +339,7 @@
             this.ViewMaster.Name = "ViewMaster";
             this.ViewMaster.OptionsBehavior.ReadOnly = true;
             this.ViewMaster.OptionsView.ShowGroupPanel = false;
+            this.ViewMaster.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.ViewMaster_ShowingEditor);
             this.ViewMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewMaster_KeyDown);
             this.ViewMaster.DoubleClick += new System.EventHandler(this.ViewMaster_DoubleClick);
             // 

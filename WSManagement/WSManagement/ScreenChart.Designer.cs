@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenChart));
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.panelTop = new DevExpress.XtraEditors.PanelControl();
@@ -46,6 +47,7 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lookUpLocation = new DevExpress.XtraEditors.LookUpEdit();
+            this.bnExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).BeginInit();
@@ -289,11 +291,24 @@
             this.lookUpLocation.StyleController = this.layoutControl1;
             this.lookUpLocation.TabIndex = 8;
             // 
+            // bnExit
+            // 
+            this.bnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnExit.Appearance.Options.UseFont = true;
+            this.bnExit.Image = ((System.Drawing.Image)(resources.GetObject("bnExit.Image")));
+            this.bnExit.Location = new System.Drawing.Point(348, 220);
+            this.bnExit.Name = "bnExit";
+            this.bnExit.Size = new System.Drawing.Size(152, 36);
+            this.bnExit.TabIndex = 9;
+            this.bnExit.Text = "&Phân bổ vào kho";
+            this.bnExit.Visible = false;
+            // 
             // ScreenChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 477);
+            this.Controls.Add(this.bnExit);
             this.Controls.Add(this.lookUpLocation);
             this.Controls.Add(this.panelTop);
             this.Name = "ScreenChart";
@@ -337,5 +352,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.LookUpEdit lookUpLocation;
+        private DevExpress.XtraEditors.SimpleButton bnExit;
     }
 }

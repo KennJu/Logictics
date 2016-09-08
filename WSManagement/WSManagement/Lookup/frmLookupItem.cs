@@ -105,6 +105,11 @@ namespace WSManagement
         private void ViewMaster_DoubleClick(object sender, EventArgs e)
         {
             GetItem();
+        }
+
+        private void ViewMaster_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
         }         
     }
 }

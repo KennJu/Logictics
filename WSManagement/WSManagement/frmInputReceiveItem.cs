@@ -60,13 +60,13 @@ namespace WSManagement
                 {
                     //insert to database
                     FillControlToDT();
-                    kq = ReceiveHeaderLogic.InsertJournalReceiveHeader(ReceiveHeaderData);
+                    kq = ReceiveHeaderLogic.Insert(ReceiveHeaderData);
                 }
                 else if (TypeConmand == 2)
                 {
                     //update data 
                     FillControlToDT();
-                    kq = ReceiveHeaderLogic.UpdateJournalReceiveHeader(ReceiveHeaderData);
+                    kq = ReceiveHeaderLogic.Update(ReceiveHeaderData);
                 }
             }
             catch (System.Data.SqlClient.SqlException ex)

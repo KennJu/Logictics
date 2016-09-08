@@ -160,13 +160,7 @@ namespace WSManagement
             ViewDetail.OptionsView.ColumnAutoWidth = false;
             ViewDetail.BestFitColumns();
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmInputReceiveItem frm = new frmInputReceiveItem();
-            frm.TypeConmand = 1;
-            frm.ShowDialog();
-        }
+         
 
         private void ViewHeader_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -279,12 +273,12 @@ namespace WSManagement
                 if (ReceiveHeaderData.RowID == 0) 
                 {
                     //Insert
-                    kq = ReceiveHeaderLogic.InsertJournalReceiveHeader(ReceiveHeaderData);
+                    kq = ReceiveHeaderLogic.Insert(ReceiveHeaderData);
                 }
                 else
                 { 
                 //Update
-                    kq = ReceiveHeaderLogic.UpdateJournalReceiveHeader(ReceiveHeaderData);
+                    kq = ReceiveHeaderLogic.Update(ReceiveHeaderData);
                 }
             }
             catch (Exception ex)
@@ -362,7 +356,7 @@ namespace WSManagement
         private void FillLineToDT(DataRow row)
         {
             ReceiveLineData = new JournalReceiveLineData ();
-            ReceiveLineData.RowID = Library.IsZeroNull(row["RowID"]);
+            ReceiveLineData.RowID = Library.IsZeroNull(ViewDetail.GetRowCellValue(ViewDetail.FocusedRowHandle,"RowID"));
             ReceiveLineData.DocumentNo_= Library.IsDBNull(row["DocumentNo_"]);
             ReceiveLineData.ItemNo_= Library.IsDBNull(row["ItemNo_"]);
             ReceiveLineData.Type = 0;
@@ -381,7 +375,8 @@ namespace WSManagement
             ReceiveLineData.TotalNet = Library.IsZeroDecimal(row["TotalNet"]);
             ReceiveLineData.GrossWeight= Library.IsZeroDecimal(row["GrossWeight"]);
             ReceiveLineData.TotalGross= Library.IsZeroDecimal(row["TotalGross"]);
-            ReceiveLineData.Description = Library.IsDBNull(row["Description"]); 
+            ReceiveLineData.Description = Library.IsDBNull(row["Description"]);
+            ReceiveLineData.ExpiryDate = Convert.ToDateTime(row["ExpiryDate"]);
             ReceiveLineData.Status = 0;
             ReceiveLineData .UserID = SystemWS.Login;
             ReceiveLineData.Note= "";
@@ -390,68 +385,68 @@ namespace WSManagement
         }
         private void ViewDetail_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
-            int kq = 0;
-            string strtemp;
-            for (int i = 0; i < ViewHeader.Columns.Count - 1; i++)
+            //int kq = 0;
+            //string strtemp;
+            //for (int i = 0; i < ViewDetail.Columns.Count - 1; i++)
+            //{
+            //    strtemp = ViewDetail.Columns[i].Name.Substring(3);
+            //    Object obj = ViewDetail.GetRowCellValue(e.RowHandle, strtemp);
+            //    if (strtemp.Equals("Quantity") || strtemp.Equals("Unit") || strtemp.Equals("UnitPrice"))
+            //    {
+            //        if (obj is DBNull)
+            //        {
+            //            e.ErrorText = "Hãy nhập " + ViewDetail.Columns[i].ToString() + " \n";
+            //            e.Valid = false;
+            //            ViewDetail.FocusedColumn = ViewDetail.Columns[strtemp];
+            //            ViewDetail.ShowEditor();
+            //            return;
+            //        }
+            //    }
+            //}
+            //try
+            //{
+            DataRow rownew = ViewDetail.GetDataRow(ViewDetail.FocusedRowHandle);
+            if (rownew == null)
             {
-                strtemp = ViewHeader.Columns[i].Name.Substring(3);
-                Object obj = ViewHeader.GetRowCellValue(e.RowHandle, strtemp);
-                if (strtemp.Equals("Quantity") || strtemp.Equals("Unit") || strtemp.Equals("UnitPrice"))
-                {
-                    if (obj is DBNull)
-                    {
-                        e.ErrorText = "Hãy nhập " + ViewHeader.Columns[i].ToString() + " \n";
-                        e.Valid = false;
-                        ViewHeader.FocusedColumn = ViewHeader.Columns[strtemp];
-                        ViewHeader.ShowEditor();
-                        return;
-                    }
-                }
+                return;
             }
-            try
-            {
-                DataRow row = ViewDetail.GetDataRow(e.RowHandle);
-                if (row == null)
-                {
-                    return;
-                }
-                FillLineToDT(row);
+            FillLineToDT(rownew);
 
-                if (ReceiveLineData.RowID == 0)
-                {
-                    //Insert
-                    kq = ReceiveLineLogic.InsertJournalReceiveLine(ReceiveLineData);
-                }
-                else
-                {
-                    //Update
-                    kq = ReceiveLineLogic.UpdateJournalReceiveLine(ReceiveLineData);
-                }
-            }
-            catch (Exception ex)
-            {
-                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
-            }
-            if (kq == 1)
-            {
-                TypeConmand = 0;
-                //Library.Message("Đã cập nhật dữ liệu thành công.", "Thông Báo - " + this.Text);
-            }
+            //    if (ReceiveLineData.RowID == 0)
+            //    {
+            //        //Insert
+            //        kq = ReceiveLineLogic.InsertJournalReceiveLine(ReceiveLineData);
+            //    }
+            //    else
+            //    {
+            //        //Update
+            //        kq = ReceiveLineLogic.UpdateJournalReceiveLine(ReceiveLineData);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
+            //}
+            //if (kq == 1)
+            //{
+            //    TypeConmand = 0;
+            //    //Library.Message("Đã cập nhật dữ liệu thành công.", "Thông Báo - " + this.Text);
+            //}
         }
 
         private void ViewDetail_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
         {
-            this.ViewDetail.SetRowCellValue(e.RowHandle, "Amount", 0);
-            this.ViewDetail.SetRowCellValue(e.RowHandle, "ExpiryDate", DateTime.Now.AddDays(30));
-            this.ViewDetail.SetRowCellValue(e.RowHandle, "PostingDate", DateTime.Now);
-            this.ViewDetail.SetRowCellValue(e.RowHandle, "CustomeDate", DateTime.Now);
-            this.ViewDetail.SetRowCellValue(e.RowHandle, "UserID", SystemWS.Login);
+            //this.ViewDetail.SetRowCellValue(e.RowHandle, "Amount", 0);
+            //this.ViewDetail.SetRowCellValue(e.RowHandle, "ExpiryDate", DateTime.Now.AddDays(30));
+            //this.ViewDetail.SetRowCellValue(e.RowHandle, "PostingDate", DateTime.Now);
+            //this.ViewDetail.SetRowCellValue(e.RowHandle, "CustomeDate", DateTime.Now);
+            //this.ViewDetail.SetRowCellValue(e.RowHandle, "UserID", SystemWS.Login);
         }
 
         private void ViewDetail_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
         {
-            e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.DisplayError;
-            e.WindowCaption = "Thông Báo";
+            //e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.DisplayError;
+            //e.WindowCaption = "Thông Báo";
         }
 
         private void ViewDetail_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -466,5 +461,93 @@ namespace WSManagement
             //        break;
             //}
         }
+
+        private void btnApproval_Click(object sender, EventArgs e)
+        {
+            int kq = 0;
+            try
+            {
+                DataRow row = ViewHeader.GetDataRow(ViewHeader.FocusedRowHandle);
+                if (row == null)
+                {
+                    return;
+                }
+                FillControlToDT(row);
+                ReceiveHeaderData.Status = 2;
+                dtLine = new DataTable();
+                dtLine = ReceiveLineLogic.GetLine(row["No_"].ToString());
+                //Update
+                if (dtLine.Rows.Count > 0)
+                {
+                    kq = ReceiveHeaderLogic.Update(ReceiveHeaderData);
+                }
+                else
+                {
+                    Library.Message("Vui lòng chọn hàng hóa cho phiếu nhập", "Thông Báo" + this.Text);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
+                return;
+            }
+            if (kq == 1)
+            {
+                TypeConmand = 0;
+                Library.Message("Đã duyệt phiếu nhập thành công.", "Thông Báo - " + this.Text);
+            }
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            int kq = 0;
+            try
+            {
+                DataRow row = ViewHeader.GetDataRow(ViewHeader.FocusedRowHandle);
+                if (row == null)
+                {
+                    return;
+                }
+                FillControlToDT(row);
+                ReceiveHeaderData.Status = 1;
+                //Update
+                kq = ReceiveHeaderLogic.Update(ReceiveHeaderData);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
+            }
+            if (kq == 1)
+            {
+                TypeConmand = 0;
+                Library.Message("Đã mở lại phiếu nhập thành công.", "Thông Báo - " + this.Text);
+            }          
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            int kq = 0;
+            try
+            {
+                DataRow row = ViewHeader.GetDataRow(ViewHeader.FocusedRowHandle);
+                if (row == null)
+                {
+                    return;
+                }
+                FillControlToDT(row); 
+                //Update
+                kq = ReceiveHeaderLogic.DeleteTran(ReceiveHeaderData);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
+            }
+            if (kq == 1)
+            {
+                TypeConmand = 0;
+                Library.Message("Đã hủy phiếu nhập thành công.", "Thông Báo - " + this.Text);
+            }          
+        }         
     }
 }

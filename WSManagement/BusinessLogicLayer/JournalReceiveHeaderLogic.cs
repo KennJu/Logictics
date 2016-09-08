@@ -26,17 +26,21 @@ namespace BusinessLogicLayer
             return JournalReceiveHeaders.GetSeries(series,code);
         } 
 
-        public int InsertJournalReceiveHeader(JournalReceiveHeaderData iEmploy)
+        public int Insert(JournalReceiveHeaderData iEmploy)
         {
             return JournalReceiveHeaders.Insert(iEmploy);
         }
 
-        public int UpdateJournalReceiveHeader(JournalReceiveHeaderData iEmploy)
+        public int Update(JournalReceiveHeaderData iEmploy)
         {
             return JournalReceiveHeaders.Update(iEmploy);
         }
 
-        public int DeleteJournalReceiveHeader(JournalReceiveHeaderData iEmploy)
+        public int DeleteTran(JournalReceiveHeaderData iEmploy)
+        {
+            return JournalReceiveHeaders.DeleteTran(iEmploy);
+        }
+        public int Delete(JournalReceiveHeaderData iEmploy)
         {
             return JournalReceiveHeaders.Delete(iEmploy);
         }

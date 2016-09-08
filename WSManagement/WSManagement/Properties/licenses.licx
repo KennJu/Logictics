@@ -13,4 +13,3 @@ DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0,
 DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraPdfViewer.PdfViewer, DevExpress.XtraPdfViewer.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a 
-DevExpress.Registration.LicenseHelper, DevExpress.Registration, Version=9.0.0.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd

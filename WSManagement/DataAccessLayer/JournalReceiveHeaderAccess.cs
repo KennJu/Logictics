@@ -168,5 +168,19 @@ namespace DataAccessLayer
                 return 0;
             }
         }
+        public int DeleteTran(JournalReceiveHeaderData _JournalReceiveHeader)
+        {
+            try
+            {
+                SqlParameter[] SQLParameters = { new SqlParameter("No_", SqlDbType.VarChar, 20) };
+                SQLParameters[0].Value = _JournalReceiveHeader.No_;
+                return clsDatabase.UpdateData("JournalReceiveHeader_DeleteTran", SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo");
+                return 0;
+            }
+        }
     }
 }

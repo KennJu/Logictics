@@ -36,7 +36,7 @@ namespace DataAccessLayer
         {
             try
             {
-                SqlParameter[] SQLParameters = {    new SqlParameter("No_", SqlDbType.VarChar, 50) ,
+                SqlParameter[] SQLParameters = {    new SqlParameter("DocumentNo_ ", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("ItemNo_", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("Type", SqlDbType.Int, 10) ,
                                                     new SqlParameter("Size", SqlDbType.VarChar, 250) ,
@@ -99,7 +99,7 @@ namespace DataAccessLayer
         {
             try
             {
-                SqlParameter[] SQLParameters = {    new SqlParameter("No_", SqlDbType.VarChar, 50) ,
+                SqlParameter[] SQLParameters = {    new SqlParameter("DocumentNo_", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("ItemNo_", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("Type", SqlDbType.Int, 10) ,
                                                     new SqlParameter("Size", SqlDbType.VarChar, 250) ,
@@ -123,7 +123,8 @@ namespace DataAccessLayer
                                                     new SqlParameter("Status", SqlDbType.Int, 50) ,
                                                     new SqlParameter("Note", SqlDbType.NVarChar, 250) ,
                                                     new SqlParameter("PostingDate", SqlDbType.DateTime, 11) ,
-                                                    new SqlParameter("CustomDate", SqlDbType.DateTime, 11) };
+                                                    new SqlParameter("CustomDate", SqlDbType.DateTime, 11) ,
+                                               new SqlParameter("RowID", SqlDbType.Int, 20) , };
                 //SQLParameters[0].Direction = ParameterDirection.Output;
                 SQLParameters[0].Value = _JournalReceiveLine.DocumentNo_;
                 SQLParameters[1].Value = _JournalReceiveLine.ItemNo_;
@@ -150,6 +151,7 @@ namespace DataAccessLayer
                 SQLParameters[22].Value = _JournalReceiveLine.Note;
                 SQLParameters[23].Value = _JournalReceiveLine.PostingDate;
                 SQLParameters[24].Value = _JournalReceiveLine.CustomDate;
+                SQLParameters[25].Value = _JournalReceiveLine.RowID;
                 return clsDatabase.UpdateData("JournalReceiveLine_Update", SQLParameters);
             }
             catch (Exception ex)
