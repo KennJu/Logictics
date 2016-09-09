@@ -103,6 +103,11 @@ namespace WSManagement
         private void ViewMaster_DoubleClick(object sender, EventArgs e)
         {
             GetSupplier();
+        }
+
+        private void ViewMaster_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
         }         
     }
 }

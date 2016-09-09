@@ -83,6 +83,7 @@
     <Compile Include="JobTitleData.cs" />
     <Compile Include="JournalEntryData.cs" />
     <Compile Include="JournalExportHeaderData.cs" />
+    <Compile Include="JournalExportLineData.cs" />
     <Compile Include="JournalReceiveHeaderData.cs" />
     <Compile Include="JournalReceiveLineData.cs" />
     <Compile Include="Library.cs" />

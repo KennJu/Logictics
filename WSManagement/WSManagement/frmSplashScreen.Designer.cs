@@ -88,7 +88,7 @@
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowMenu = false;
             this.pictureEdit1.Size = new System.Drawing.Size(160, 48);
-            this.pictureEdit1.TabIndex = 8; 
+            this.pictureEdit1.TabIndex = 8;
             // 
             // frmSplashScreen
             // 

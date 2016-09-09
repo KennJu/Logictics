@@ -21,6 +21,15 @@ namespace BusinessLogicLayer
         {
             return JournalReceiveHeaders.GetData();
         }
+        public DataTable GetDataByCondition(string _no_, DateTime _fromdate, DateTime _todate, int _status, string _location, string _supplier, string _supplierName)
+        {
+            return JournalReceiveHeaders.GetDataByCondition(_no_,_fromdate,_todate,_status,_location,_supplier,_supplierName);
+        }
+
+        public DataTable GetListDeliver()
+        {
+            return JournalReceiveHeaders.GetListDeliver();
+        }
         public string GetSeries(string series,string code)
         {
             return JournalReceiveHeaders.GetSeries(series,code);
@@ -34,6 +43,10 @@ namespace BusinessLogicLayer
         public int Update(JournalReceiveHeaderData iEmploy)
         {
             return JournalReceiveHeaders.Update(iEmploy);
+        }
+        public int UpdateStatus(JournalReceiveHeaderData iEmploy)
+        {
+            return JournalReceiveHeaders.UpdateStatus(iEmploy);
         }
 
         public int DeleteTran(JournalReceiveHeaderData iEmploy)

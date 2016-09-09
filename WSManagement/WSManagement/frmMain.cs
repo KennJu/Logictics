@@ -167,5 +167,23 @@ namespace WSManagement
             frmJournalReceiveItem frm = new frmJournalReceiveItem();
             ViewForm(frm);
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDeliveryItemToStock frm = new frmDeliveryItemToStock();
+            ViewForm(frm);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmJournalReceiveItemHistory frm = new frmJournalReceiveItemHistory();
+            ViewForm(frm);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmJournalExportItem frm = new frmJournalExportItem();
+            ViewForm(frm);
+        }
     }
 }

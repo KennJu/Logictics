@@ -18,7 +18,10 @@ namespace BusinessLogicLayer
         {
             return JournalReceiveLines.GetLine(DocumentNo_);
         }
-
+        public bool CheckExistItem(JournalReceiveLineData ReceiveLine)
+        {
+            return JournalReceiveLines.CheckExistItem(ReceiveLine);
+        }
         public int InsertJournalReceiveLine(JournalReceiveLineData iEmploy)
         {
             return JournalReceiveLines.Insert(iEmploy);
@@ -29,7 +32,7 @@ namespace BusinessLogicLayer
             return JournalReceiveLines.Update(iEmploy);
         }
 
-        public int DeleteJournalReceiveLine(JournalReceiveLineData iEmploy)
+        public int Delete(JournalReceiveLineData iEmploy)
         {
             return JournalReceiveLines.Delete(iEmploy);
         }

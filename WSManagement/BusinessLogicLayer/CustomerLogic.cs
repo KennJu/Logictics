@@ -18,6 +18,11 @@ namespace BusinessLogicLayer
         {
             return Customer.GetData();
         }
+        public DataTable GetDataByCondition(CustomerData _customer)
+        {
+            return Customer.GetDataByCondition(_customer);
+        }
+
         public int Insert(CustomerData iCustomer)
         {
             return Customer.Insert(iCustomer);

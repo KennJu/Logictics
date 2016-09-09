@@ -115,7 +115,6 @@
             this.viewMaster.GridControl = this.gridMaster;
             this.viewMaster.Name = "viewMaster";
             this.viewMaster.OptionsView.ColumnAutoWidth = false;
-            this.viewMaster.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.viewMaster.OptionsView.ShowGroupPanel = false;
             this.viewMaster.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.viewMaster_ShowingEditor);
             this.viewMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.viewMaster_KeyDown);
@@ -187,7 +186,8 @@
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmLookupSeries";
-            this.Text = "frmLookupSeries";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Chọn Số Series";
             this.Load += new System.EventHandler(this.frmLookupSeries_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelTop)).EndInit();
             this.panelTop.ResumeLayout(false);

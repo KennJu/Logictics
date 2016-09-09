@@ -62,5 +62,7 @@ namespace DataTransferObject
             this.Description = _Description;
             this.UserID = _UserID;
         }
+        public CellDetailData()
+        { }
     }
 }

@@ -18,7 +18,7 @@ namespace DataTransferObject
         public string CarNo_ { get; set; }
         public string CarType { get; set; }
         public string Driver { get; set; }
-        public string Location { get; set; }
+        public string LocationNo_ { get; set; }
         public string ReasonCode { get; set; }
         public string EmployeeNo_ { get; set; }
         public int Status { get; set; }
@@ -38,7 +38,7 @@ namespace DataTransferObject
             this.CarNo_ = _CarNo_;
             this.CarType = _CarType;
             this.Driver = _Driver;
-            this.Location = _Location;
+            this.LocationNo_ = _Location;
             this.ReasonCode = _ReasonCode;
             this.EmployeeNo_ = _EmployeeNo_;
             this.Status = _Status;

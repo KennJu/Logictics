@@ -161,6 +161,7 @@
             this.bnDeliverToLocation.TabIndex = 8;
             this.bnDeliverToLocation.Text = "&Phân bổ vào kho";
             this.bnDeliverToLocation.Visible = false;
+            this.bnDeliverToLocation.Click += new System.EventHandler(this.bnDeliverToLocation_Click);
             // 
             // btnCancel
             // 
@@ -513,6 +514,7 @@
             this.gridHeader.TabIndex = 0;
             this.gridHeader.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewHeader});
+            this.gridHeader.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridHeader_KeyDown);
             // 
             // ViewHeader
             // 
@@ -520,9 +522,11 @@
             this.ViewHeader.Name = "ViewHeader";
             this.ViewHeader.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.ViewHeader.OptionsView.ShowGroupPanel = false;
+            this.ViewHeader.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.ViewHeader_ShowingEditor);
             this.ViewHeader.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.ViewHeader_InitNewRow);
             this.ViewHeader.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.ViewHeader_FocusedRowChanged);
             this.ViewHeader.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.ViewHeader_ValidateRow);
+            this.ViewHeader.GotFocus += new System.EventHandler(this.ViewHeader_GotFocus);
             // 
             // groupControl2
             // 
@@ -545,6 +549,7 @@
             this.gridDetail.TabIndex = 0;
             this.gridDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewDetail});
+            this.gridDetail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridDetail_KeyDown);
             // 
             // ViewDetail
             // 
@@ -553,10 +558,12 @@
             this.ViewDetail.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.ViewDetail.OptionsView.ShowFooter = true;
             this.ViewDetail.OptionsView.ShowGroupPanel = false;
+            this.ViewDetail.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.ViewDetail_ShowingEditor);
             this.ViewDetail.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.ViewDetail_InitNewRow);
             this.ViewDetail.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.ViewDetail_CellValueChanged);
             this.ViewDetail.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.ViewDetail_InvalidRowException);
             this.ViewDetail.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.ViewDetail_ValidateRow);
+            this.ViewDetail.GotFocus += new System.EventHandler(this.ViewDetail_GotFocus);
             // 
             // layoutControlItem9
             // 
@@ -577,7 +584,7 @@
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelRight);
             this.Name = "frmJournalReceiveItem";
-            this.Text = "Nhật Ký Nhập Kho";
+            this.Text = "Nhập Kho";
             this.Load += new System.EventHandler(this.frmJournalReceiveItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelRight)).EndInit();
             this.panelRight.ResumeLayout(false);

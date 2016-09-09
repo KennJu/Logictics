@@ -29,6 +29,48 @@ namespace DataAccessLayer
                 return null;
             }
         }
+        public DataTable GetListDeliver()
+        {
+            try
+            {
+                string storeName = "JournalReceiveHeader_GetListDeliver";
+                return clsDatabase.GetDataTable(storeName, (int)clsDatabase.SqlType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
+        public DataTable GetDataByCondition(string _no_,DateTime _fromdate, DateTime _todate,int _status,string _location,string _supplier,string _supplierName)
+        {
+            try
+            {
+                string storeName = "JournalReceiveHeader_GetDataByCondition";
+                SqlParameter[] SQLParameters = {    new SqlParameter("Status", SqlDbType.Int, 50) ,
+                                                    new SqlParameter("FromDate", SqlDbType.DateTime, 11), 
+                                                    new SqlParameter("ToDate", SqlDbType.DateTime, 11) ,
+                                                    new SqlParameter("LocationNo_", SqlDbType.NVarChar, 50) ,
+                                                    new SqlParameter("SupplierNo_", SqlDbType.NVarChar, 50)  ,
+                                                    new SqlParameter("SupplierName", SqlDbType.NVarChar, 250)  ,
+                                                    new SqlParameter("No_", SqlDbType.NVarChar, 250) 
+                                               };
+                SQLParameters[0].Value = _status;
+                SQLParameters[1].Value = _fromdate;
+                SQLParameters[2].Value = _todate;
+                SQLParameters[3].Value = _location;
+                SQLParameters[4].Value = _supplier;
+                SQLParameters[5].Value = _supplierName;
+                SQLParameters[6].Value = _no_;
+                return clsDatabase.GetDataTable(storeName, SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
+
 
         public DataTable GetLine(string No_)
         {
@@ -182,5 +224,22 @@ namespace DataAccessLayer
                 return 0;
             }
         }
+        public int UpdateStatus(JournalReceiveHeaderData _JournalReceiveHeader)
+        {
+            try
+            {
+                SqlParameter[] SQLParameters = { new SqlParameter("No_", SqlDbType.VarChar, 50), 
+                                                   new SqlParameter("Status", SqlDbType.Int, 50), 
+                                               };
+                SQLParameters[0].Value = _JournalReceiveHeader.No_;
+                SQLParameters[1].Value = _JournalReceiveHeader.Status; 
+                return clsDatabase.UpdateData("JournalReceiveHeader_UpdateStatus", SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message, "Cảnh Báo");
+                return 0;
+            }
+        } 
     }
 }

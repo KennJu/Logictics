@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skin1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribLeftFooter = new DevExpress.XtraBars.RibbonGalleryBarItem();
@@ -92,8 +92,6 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -158,7 +156,6 @@
             this.ribSystem,
             this.ribCategory,
             this.ribInventory,
-            this.ribReport,
             this.ribHelp});
             this.ribbon.Size = new System.Drawing.Size(829, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -180,14 +177,14 @@
             // 
             // 
             // 
-            galleryItemGroup1.Caption = "Group6";
-            galleryItem1.Caption = "Item5";
-            galleryItem2.Caption = "Item6";
-            galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2});
+            galleryItemGroup4.Caption = "Group6";
+            galleryItem6.Caption = "Item5";
+            galleryItem7.Caption = "Item6";
+            galleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem6,
+            galleryItem7});
             this.ribLeftFooter.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup4});
             this.ribLeftFooter.Gallery.ShowItemText = true;
             this.ribLeftFooter.Id = 2;
             this.ribLeftFooter.Name = "ribLeftFooter";
@@ -207,6 +204,7 @@
             // bbiChangepass
             // 
             this.bbiChangepass.Caption = "Đổi Mật Khẩu";
+            this.bbiChangepass.Enabled = false;
             this.bbiChangepass.Id = 2;
             this.bbiChangepass.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiChangepass.LargeGlyph")));
             this.bbiChangepass.LargeWidth = 80;
@@ -239,9 +237,11 @@
             // bbiGrant
             // 
             this.bbiGrant.Caption = "Phân Quyền";
+            this.bbiGrant.Enabled = false;
             this.bbiGrant.Id = 5;
             this.bbiGrant.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiGrant.LargeGlyph")));
             this.bbiGrant.Name = "bbiGrant";
+            this.bbiGrant.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.bbiGrant.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiGrant_ItemClick);
             // 
             // bbiEmployee
@@ -298,9 +298,9 @@
             // 
             // 
             // 
-            galleryItemGroup2.Caption = "Group4";
+            galleryItemGroup5.Caption = "Group4";
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup5});
             this.ribbonGalleryBarItem1.Id = 14;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -320,16 +320,16 @@
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group7";
-            galleryItem3.Caption = "Item7";
-            galleryItem4.Caption = "Item8";
-            galleryItem5.Caption = "Item9";
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem3,
-            galleryItem4,
-            galleryItem5});
+            galleryItemGroup6.Caption = "Group7";
+            galleryItem8.Caption = "Item7";
+            galleryItem9.Caption = "Item8";
+            galleryItem10.Caption = "Item9";
+            galleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem8,
+            galleryItem9,
+            galleryItem10});
             this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup6});
             this.ribbonGalleryBarItem2.Id = 16;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
             // 
@@ -355,6 +355,7 @@
             // bbiBackup
             // 
             this.bbiBackup.Caption = "Sao Lưu Dữ Liệu";
+            this.bbiBackup.Enabled = false;
             this.bbiBackup.Id = 19;
             this.bbiBackup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiBackup.LargeGlyph")));
             this.bbiBackup.Name = "bbiBackup";
@@ -363,6 +364,7 @@
             // bbiRestore
             // 
             this.bbiRestore.Caption = "Phục Hồi Dữ Liệu";
+            this.bbiRestore.Enabled = false;
             this.bbiRestore.Id = 20;
             this.bbiRestore.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiRestore.LargeGlyph")));
             this.bbiRestore.Name = "bbiRestore";
@@ -370,6 +372,7 @@
             // bbiSignout
             // 
             this.bbiSignout.Caption = "Đăng Xuất";
+            this.bbiSignout.Enabled = false;
             this.bbiSignout.Id = 21;
             this.bbiSignout.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiSignout.LargeGlyph")));
             this.bbiSignout.Name = "bbiSignout";
@@ -388,6 +391,7 @@
             // bbiJobtitle
             // 
             this.bbiJobtitle.Caption = "Chức Vụ";
+            this.bbiJobtitle.Enabled = false;
             this.bbiJobtitle.Id = 23;
             this.bbiJobtitle.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiJobtitle.LargeGlyph")));
             this.bbiJobtitle.Name = "bbiJobtitle";
@@ -440,6 +444,7 @@
             // bbiUnit
             // 
             this.bbiUnit.Caption = "Đơn vị tính";
+            this.bbiUnit.Enabled = false;
             this.bbiUnit.Id = 29;
             this.bbiUnit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiUnit.LargeGlyph")));
             this.bbiUnit.Name = "bbiUnit";
@@ -448,6 +453,7 @@
             // bbiItemGroup
             // 
             this.bbiItemGroup.Caption = "Nhóm Sản Phẩm";
+            this.bbiItemGroup.Enabled = false;
             this.bbiItemGroup.Id = 30;
             this.bbiItemGroup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiItemGroup.LargeGlyph")));
             this.bbiItemGroup.LargeWidth = 90;
@@ -475,6 +481,7 @@
             this.barButtonItem3.Id = 33;
             this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -482,6 +489,7 @@
             this.barButtonItem4.Id = 34;
             this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -489,10 +497,12 @@
             this.barButtonItem5.Id = 35;
             this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "Nhật Ký Xuất";
+            this.barButtonItem6.Enabled = false;
             this.barButtonItem6.Id = 36;
             this.barButtonItem6.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.LargeGlyph")));
             this.barButtonItem6.LargeWidth = 80;
@@ -501,6 +511,7 @@
             // barButtonItem11
             // 
             this.barButtonItem11.Caption = "Tồn Kho";
+            this.barButtonItem11.Enabled = false;
             this.barButtonItem11.Id = 37;
             this.barButtonItem11.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.LargeGlyph")));
             this.barButtonItem11.Name = "barButtonItem11";
@@ -508,6 +519,7 @@
             // barButtonItem12
             // 
             this.barButtonItem12.Caption = "Số Nhật Ký";
+            this.barButtonItem12.Enabled = false;
             this.barButtonItem12.Id = 38;
             this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
             this.barButtonItem12.LargeWidth = 70;
@@ -516,12 +528,14 @@
             // barButtonItem13
             // 
             this.barButtonItem13.Caption = "Thẻ Kho";
+            this.barButtonItem13.Enabled = false;
             this.barButtonItem13.Id = 39;
             this.barButtonItem13.Name = "barButtonItem13";
             // 
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Doanh Thu";
+            this.barButtonItem14.Enabled = false;
             this.barButtonItem14.Id = 40;
             this.barButtonItem14.Name = "barButtonItem14";
             // 
@@ -611,20 +625,6 @@
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
-            // ribReport
-            // 
-            this.ribReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup12});
-            this.ribReport.Name = "ribReport";
-            this.ribReport.Text = "Báo Cáo";
-            // 
-            // ribbonPageGroup12
-            // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem14);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "ribbonPageGroup12";
-            // 
             // ribHelp
             // 
             this.ribHelp.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -701,7 +701,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribCategory;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribInventory;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribReport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem bbiChangepass;
@@ -752,7 +751,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12; 
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10; 
     }
 }

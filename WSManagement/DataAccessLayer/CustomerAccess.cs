@@ -27,7 +27,28 @@ namespace DataAccessLayer
                 return null;
             }
         }
-
+        public DataTable GetDataByCondition(CustomerData _Customer)
+        {
+            try
+            {
+                string storeName = "Customer_GetDataByCondition";
+                SqlParameter[] SQLParameters = {    new SqlParameter("No_", SqlDbType.NVarChar,50) ,
+                                                    new SqlParameter("Name", SqlDbType.NVarChar, 250) ,
+                                                    new SqlParameter("SearchName", SqlDbType.NVarChar,250) ,
+                                                    new SqlParameter("Address", SqlDbType.NVarChar,250) ,
+                                                };
+                SQLParameters[0].Value = _Customer.No_;
+                SQLParameters[1].Value = _Customer.Name;
+                SQLParameters[2].Value = _Customer.SearchName;
+                SQLParameters[3].Value = _Customer.Address;
+                return clsDatabase.GetDataTable(storeName, SQLParameters);
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return null;
+            }
+        }
         public int Insert(CustomerData _Customer)
         {
             try

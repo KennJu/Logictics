@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellAccess.cs" />
+    <Compile Include="CellDetailAccess.cs" />
     <Compile Include="clsDatabase.cs" />
     <Compile Include="Connectionstrings.cs" />
     <Compile Include="CountryAccess.cs" />
@@ -62,6 +64,9 @@
     <Compile Include="GroupUserAccess.cs" />
     <Compile Include="ItemAccess.cs" />
     <Compile Include="ItemGroupAccess.cs" />
+    <Compile Include="JournalEntryAccess.cs" />
+    <Compile Include="JournalExportHeaderAccess.cs" />
+    <Compile Include="JournalExportLineAccess.cs" />
     <Compile Include="JournalReceiveHeaderAccess.cs" />
     <Compile Include="JournalReceiveLineAccess.cs" />
     <Compile Include="LoginAccess.cs" />

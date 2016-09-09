@@ -16,7 +16,9 @@ namespace DataTransferObject
         public string Size { get; set; }
         public decimal Quantity { get; set; }
         public string Unit { get; set; }
+        public string LotNo_ { get; set; }
         public decimal UnitPrice { get; set; }
+        public decimal QtyInPallet { get; set; }
         public decimal QtyperUnit { get; set; }
         public decimal QtytoPakge { get; set; }
         public string UnittoPakge { get; set; }
@@ -36,10 +38,11 @@ namespace DataTransferObject
         public DateTime PostingDate { get; set; }
         public string UserID { get; set; }
         public int Status { get; set; }
-        public JournalEntryData(int _RowID, int _DocumentType, string _DocumentNo_, string _CustomerNo_, string _ItemNo_, int _Type, string _Size, decimal _Quantity, string _Unit,
-                                decimal _UnitPrice, decimal _QtyperUnit, decimal _QtytoPakge, string _UnittoPakge, decimal _NetWeight, decimal _TotalNet, decimal _GrossWeight, 
-                                decimal _TotalGross,decimal _Amount,decimal _VAT,decimal _LineDiscount,decimal _TotalAmount,string _PalletNo_,string _CellNo_,string _Description,
-                                DateTime _ExpiryDate,DateTime _DocumentDate,DateTime _PostingDate,string _UserID,int _Status)
+        public string ReceiveNo_{ get; set; }
+        public JournalEntryData(int _RowID, int _DocumentType, string _DocumentNo_, string _CustomerNo_, string _ItemNo_, int _Type, string _Size, decimal _Quantity,
+                                string _Unit, string _lotno_, decimal _UnitPrice,decimal _QtyInPallet, decimal _QtyperUnit, decimal _QtytoPakge, string _UnittoPakge, decimal _NetWeight, 
+                                decimal _TotalNet, decimal _GrossWeight, decimal _TotalGross,decimal _Amount,decimal _VAT,decimal _LineDiscount,decimal _TotalAmount,
+                                string _PalletNo_,string _CellNo_,string _Description, DateTime _ExpiryDate,DateTime _DocumentDate,DateTime _PostingDate,string _UserID,int _Status,string _receiveNo_)
         {
             this.RowID = _RowID;
             this.DocumentType = _DocumentType;
@@ -50,7 +53,9 @@ namespace DataTransferObject
             this.Size = _Size;
             this.Quantity = _Quantity;
             this.Unit = _Unit;
+            this.LotNo_= _lotno_;
             this.UnitPrice = _UnitPrice;
+            this.QtyInPallet = _QtyInPallet;
             this.QtyperUnit = _QtyperUnit;
             this.QtytoPakge = _QtytoPakge;
             this.UnittoPakge = _UnittoPakge;
@@ -70,6 +75,7 @@ namespace DataTransferObject
             this.PostingDate = _PostingDate;
             this.UserID = _UserID;
             this.Status = _Status;
+            this.ReceiveNo_= _receiveNo_;
         }
         public JournalEntryData()
         { 

@@ -31,12 +31,38 @@ namespace DataAccessLayer
                 return null;
             }
         }
-
+        public bool CheckExistItem(JournalReceiveLineData ReceiveLine)
+        {
+            try
+            {
+                string storeName = "JournalReceiveLine_CheckExist";
+                SqlParameter[] SQLParameters = {    new SqlParameter("RowCount", SqlDbType.Int,10) ,
+                                                    new SqlParameter("DocumentNo_", SqlDbType.NVarChar, 50) ,
+                                                    new SqlParameter("ItemNo_", SqlDbType.NVarChar,50) ,
+                               
+                                                };
+                SQLParameters[0].Direction = ParameterDirection.Output;
+                SQLParameters[1].Value = ReceiveLine.DocumentNo_;
+                SQLParameters[2].Value = ReceiveLine.ItemNo_;
+                clsDatabase.GetDataTable(storeName, SQLParameters);
+                if (SQLParameters[0].Value.ToString() == "0")
+                {
+                    return false;
+                }
+                else
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                Library.Message("Lỗi: " + ex.Message + "\n" + ex.ToString(), "Cảnh Báo");
+                return false;
+            }
+        }
         public int Insert(JournalReceiveLineData _JournalReceiveLine)
         {
             try
             {
-                SqlParameter[] SQLParameters = {    new SqlParameter("DocumentNo_ ", SqlDbType.VarChar, 50) ,
+                SqlParameter[] SQLParameters = {    new SqlParameter("DocumentNo_", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("ItemNo_", SqlDbType.VarChar, 50) ,
                                                     new SqlParameter("Type", SqlDbType.Int, 10) ,
                                                     new SqlParameter("Size", SqlDbType.VarChar, 250) ,
@@ -61,7 +87,6 @@ namespace DataAccessLayer
                                                     new SqlParameter("Note", SqlDbType.NVarChar, 250) ,
                                                     new SqlParameter("PostingDate", SqlDbType.DateTime, 11) ,
                                                     new SqlParameter("CustomDate", SqlDbType.DateTime, 11) };
-                //SQLParameters[0].Direction = ParameterDirection.Output;
                 SQLParameters[0].Value = _JournalReceiveLine.DocumentNo_;
                 SQLParameters[1].Value = _JournalReceiveLine.ItemNo_;
                 SQLParameters[2].Value = _JournalReceiveLine.Type;
@@ -125,7 +150,6 @@ namespace DataAccessLayer
                                                     new SqlParameter("PostingDate", SqlDbType.DateTime, 11) ,
                                                     new SqlParameter("CustomDate", SqlDbType.DateTime, 11) ,
                                                new SqlParameter("RowID", SqlDbType.Int, 20) , };
-                //SQLParameters[0].Direction = ParameterDirection.Output;
                 SQLParameters[0].Value = _JournalReceiveLine.DocumentNo_;
                 SQLParameters[1].Value = _JournalReceiveLine.ItemNo_;
                 SQLParameters[2].Value = _JournalReceiveLine.Type;
@@ -164,8 +188,10 @@ namespace DataAccessLayer
         {
             try
             {
-                SqlParameter[] SQLParameters = { new SqlParameter("No_", SqlDbType.VarChar, 20) };
+                SqlParameter[] SQLParameters = { new SqlParameter("DocumentNo_", SqlDbType.VarChar, 250),
+                                               new SqlParameter("ItemNo_", SqlDbType.VarChar, 250)};
                 SQLParameters[0].Value = _JournalReceiveLine.DocumentNo_;
+                SQLParameters[1].Value = _JournalReceiveLine.ItemNo_;
                 return clsDatabase.UpdateData("JournalReceiveLine_Delete", SQLParameters);
             }
             catch (Exception ex)

@@ -32,10 +32,10 @@ namespace DataTransferObject
         public int Status { get; set; }
         public string Note { get; set; }
         public DateTime PostingDate { get; set; }
-        public DateTime CustomDate { get; set; }
+        public DateTime CustomDate { get; set; } 
         public JournalReceiveLineData(int _RowID, string _DocumentNo_, string _ItemNo_, int _Type, string _Size, string _LotNo_, decimal _Quantity, string _Unit, decimal _QtyperUnit, decimal _QtytoPakge,
                                         string _UnitPakge,decimal _UnitPrice,decimal _VAT,decimal _LineDiscount,decimal _QtyInPallet,decimal _NetWeight,decimal _TotalNet, decimal _GrossWeight,
-                                        decimal _TotalGross,DateTime _ExpiryDate,string _Description,string _UserID,int _Status,string _Note,DateTime _PostingDate,DateTime _CustomDate  )
+                                        decimal _TotalGross,DateTime _ExpiryDate,string _Description,string _UserID,int _Status,string _Note,DateTime _PostingDate,DateTime _CustomDate)
         { 
                     this.RowID = 	_RowID ;
                     this.DocumentNo_ = _DocumentNo_;

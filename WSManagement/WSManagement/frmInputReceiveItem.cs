@@ -190,15 +190,7 @@ namespace WSManagement
             viewMaster.Columns[16].Caption = "Hạn Dùng";
             viewMaster.Columns[17].Caption = "Ghi Chú";
             viewMaster.Columns[18].Caption = "User";
-            //Init 
-            //   Dim reButton As New RepositoryItemButtonEdit
-            //AddHandler reButton.ButtonClick, AddressOf LookupButtonClickItemNo
-            //AddHandler reButton.KeyDown, AddressOf LookupButtonKeyDownItemNo
-            //reButton.Buttons(0).Tag = GridControl2
-            //reButton.NullText = ""
-            //GridControl2.RepositoryItems.AddRange(New RepositoryItem() {reButton})
-            //GridView2.Columns("ItemNo").ColumnEdit = reButton
-            //GridView2.Columns("ItemNo").ColumnEdit.ReadOnly = True
+            //Init  
             RepositoryItemButtonEdit rebuttonItem = new RepositoryItemButtonEdit();
             rebuttonItem.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(LookupButtonClickItemNo);
             rebuttonItem.Buttons[0].Tag = viewMaster;
@@ -255,6 +247,13 @@ namespace WSManagement
                     }
                 }
             }
+            DataRow row = viewMaster.GetDataRow(e.RowHandle); ;
+            MessageBox.Show(row["RowID"].ToString());
+            DataRow rownew = viewMaster.GetDataRow(viewMaster.FocusedRowHandle);
+            if (rownew == null)
+            {
+                return;
+            } 
           
         } 
         private void viewMaster_ShowingEditor(object sender, CancelEventArgs e)

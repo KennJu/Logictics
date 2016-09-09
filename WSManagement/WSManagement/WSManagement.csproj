@@ -83,6 +83,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmJournalExportItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalExportItem.Designer.cs">
+      <DependentUpon>frmJournalExportItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalReceiveItemHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalReceiveItemHistory.Designer.cs">
+      <DependentUpon>frmJournalReceiveItemHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryItemToStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryItemToStock.Designer.cs">
+      <DependentUpon>frmDeliveryItemToStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -139,6 +157,24 @@
     </Compile>
     <Compile Include="frmJournalReceiveItem.Designer.cs">
       <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\frmChooseItemInStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\frmChooseItemInStock.Designer.cs">
+      <DependentUpon>frmChooseItemInStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\frmLookupCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\frmLookupCustomer.Designer.cs">
+      <DependentUpon>frmLookupCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\frmLookupCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lookup\frmLookupCell.Designer.cs">
+      <DependentUpon>frmLookupCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Lookup\frmLookupSupplier.cs">
       <SubType>Form</SubType>
@@ -208,6 +244,15 @@
     <Compile Include="Template.Designer.cs">
       <DependentUpon>Template.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmJournalExportItem.resx">
+      <DependentUpon>frmJournalExportItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalReceiveItemHistory.resx">
+      <DependentUpon>frmJournalReceiveItemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryItemToStock.resx">
+      <DependentUpon>frmDeliveryItemToStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +276,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJournalReceiveItem.resx">
       <DependentUpon>frmJournalReceiveItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\frmChooseItemInStock.resx">
+      <DependentUpon>frmChooseItemInStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\frmLookupCustomer.resx">
+      <DependentUpon>frmLookupCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lookup\frmLookupCell.resx">
+      <DependentUpon>frmLookupCell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lookup\frmLookupSupplier.resx">
       <DependentUpon>frmLookupSupplier.cs</DependentUpon>

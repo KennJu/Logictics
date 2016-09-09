@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellDetailLogic.cs" />
+    <Compile Include="CellLogic.cs" />
     <Compile Include="CountryLogic.cs" />
     <Compile Include="CustomerLogic.cs" />
     <Compile Include="DepartmentLogic.cs" />
@@ -62,6 +64,9 @@
     <Compile Include="GroupUserLogic.cs" />
     <Compile Include="ItemGroupLogic.cs" />
     <Compile Include="ItemLogic.cs" />
+    <Compile Include="JournalEntryLogic.cs" />
+    <Compile Include="JournalExportHeaderLogic.cs" />
+    <Compile Include="JournalExportLineLogic.cs" />
     <Compile Include="JournalReceiveHeaderLogic.cs" />
     <Compile Include="JournalReceiveLineLogic.cs" />
     <Compile Include="LoginLogic.cs" />
