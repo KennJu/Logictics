@@ -331,6 +331,7 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(706, 76);
             this.panelTop.TabIndex = 5;
+            this.panelTop.Visible = false;
             // 
             // layoutControl1
             // 

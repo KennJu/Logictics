@@ -14,16 +14,20 @@ using System.Collections;
 using DevExpress.Utils;
 using BusinessLogicLayer;
 using DataTransferObject;
+using System.Threading;
 
 namespace WSManagement
 {
     public partial class frmJournalReceiveItem : DevExpress.XtraEditors.XtraForm
     {
         public frmJournalReceiveItem()
-        { 
+        {
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+               t.Start(); 
             InitializeComponent();
             InitGridHeader();
             InitGridLine();
+            t.Abort();
         }
         JournalReceiveHeaderLogic ReceiveHeaderLogic;
         JournalReceiveHeaderData ReceiveHeaderData;
@@ -42,6 +46,18 @@ namespace WSManagement
         {
  
         }
+        //  public frmMain()
+        //{
+        //    Thread t = new Thread(new ThreadStart(SplashScreen));
+        //    t.Start(); 
+        //    InitializeComponent();
+        //    t.Abort(); 
+        //} 
+        private void SplashScreen()
+        {
+             //load Form
+            Application.Run(new frmWait());
+        } 
         private void InitGridHeader()
         {
             ReceiveHeaderLogic = new JournalReceiveHeaderLogic();
