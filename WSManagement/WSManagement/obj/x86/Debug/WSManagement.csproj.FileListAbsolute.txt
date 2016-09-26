@@ -228,3 +228,9 @@ C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmJournalExportItem.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupCustomer.resources
 C:\Users\Administrator\Desktop\QuanLyKho\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmChooseItemInStock.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmJournalExportItem.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmJournalReceiveItemHistory.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmDeliveryItemToStock.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmChooseItemInStock.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupCustomer.resources
+C:\Users\KennyJu\Desktop\Project\Logictics\WSManagement\WSManagement\obj\x86\Debug\WSManagement.frmLookupCell.resources

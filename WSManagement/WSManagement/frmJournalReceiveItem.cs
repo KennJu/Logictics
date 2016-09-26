@@ -481,7 +481,7 @@ namespace WSManagement
                 }
 
                 FillLineToDT(rownew);
-
+                Library.Message("RowID: " + ReceiveLineData.RowID.ToString(),"Thông báo");
                 if (!ReceiveLineLogic.CheckExistItem(ReceiveLineData))
                 {
                     //Insert
@@ -656,6 +656,7 @@ namespace WSManagement
             
            
         }
+
         private void DeleteRow()
         {
             int irow = this.ViewHeader.FocusedRowHandle;
@@ -688,6 +689,7 @@ namespace WSManagement
                     break;
             }
         }
+
         private void ViewHeader_GotFocus(object sender, EventArgs e)
         {
             _focus = 1;
@@ -735,6 +737,7 @@ namespace WSManagement
         {
             DeliverItemToPallet();
         }
+
         private string AnalysisString(string str)
         { 
             switch (str.Length)
@@ -751,6 +754,7 @@ namespace WSManagement
                     return str; 
 	        } 
         }
+
         private string GetBarcodeNumber(string barcode,int index)
         {     
             string endno_=""; 
@@ -850,6 +854,7 @@ namespace WSManagement
                 Library.Message("Lỗi: " + ex.Message, "Cảnh Báo" + this.Text);
             }
         }
+
         private void GetData2PostCellDetail_JournalEntry(DataRow rowMaster, DataRow rowDetail, string palletno, decimal qty)
         {
             JEData = new JournalEntryData();
@@ -883,7 +888,7 @@ namespace WSManagement
             JEData.QtyInPallet= Library.IsZeroDecimal(rowDetail["QtyInPallet"]);
             JEData.ReceiveNo_ = Library.IsDBNull(rowMaster["No_"]);
         }
-
+        
         private void GetDataJournalDetailLine( DevExpress.XtraGrid.Views.Grid.GridView view,int iRow , JournalEntryData JEData)
         {
             JEData.DocumentNo_ = Library.IsDBNull(this.ViewHeader.GetRowCellValue(this.ViewHeader.FocusedRowHandle, "No_"));

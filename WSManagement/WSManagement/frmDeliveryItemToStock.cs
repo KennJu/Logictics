@@ -40,132 +40,145 @@ namespace WSManagement
         }
         private void InitGridHeader()
         {
-            ReceiveHeaderLogic = new JournalReceiveHeaderLogic();
-            ReceiveHeaderData = new JournalReceiveHeaderData(); 
-            JEData = new JournalEntryData();
-            JELogic = new JournalEntryLogic();
-            Supplier = new SupplierLogic();
-            dtHeader = new DataTable();
-            dtLine = new DataTable();
-            dtHeader=ReceiveHeaderLogic.GetListDeliver();
-            gridHeader.DataSource = dtHeader;
-            //Định dạng GridHeader
-            ViewHeader.Columns[0].Visible = false;
-            ViewHeader.Columns["No_"].Caption = "Mã Phiếu Nhập";
-            ViewHeader.Columns[2].Caption = "Mã Nhà Cung Cấp";
-            ViewHeader.Columns[3].Caption = "Tên Nhà Cung Cấp";
-            ViewHeader.Columns[4].Caption = "Kho";
-            ViewHeader.Columns[5].Caption = "Ngày Chứng Từ";
-            ViewHeader.Columns[6].Caption = "Ngày Ghi Sổ";
-            ViewHeader.Columns[7].Caption = "Người Giao";
-            ViewHeader.Columns[8].Caption = "Loại Xe";
-            ViewHeader.Columns[9].Caption = "Số Xe";
-            ViewHeader.Columns[10].Visible = false;
-            ViewHeader.Columns[11].Caption = "Mã Nhân Viên";
-            ViewHeader.Columns[12].Caption = "Trạng Thái";
-            ViewHeader.Columns[13].Caption = "Ghi Chú";
-            ViewHeader.Columns[14].Caption = "User";
+            try
+            {
+                ReceiveHeaderLogic = new JournalReceiveHeaderLogic();
+                ReceiveHeaderData = new JournalReceiveHeaderData();
+                JEData = new JournalEntryData();
+                JELogic = new JournalEntryLogic();
+                Supplier = new SupplierLogic();
+                dtHeader = new DataTable();
+                dtLine = new DataTable();
+                dtHeader = ReceiveHeaderLogic.GetListDeliver();
+                gridHeader.DataSource = dtHeader;
+                //Định dạng GridHeader
+                ViewHeader.Columns[0].Visible = false;
+                ViewHeader.Columns["No_"].Caption = "Mã Phiếu Nhập";
+                ViewHeader.Columns[2].Caption = "Mã Nhà Cung Cấp";
+                ViewHeader.Columns[3].Caption = "Tên Nhà Cung Cấp";
+                ViewHeader.Columns[4].Caption = "Kho";
+                ViewHeader.Columns[5].Caption = "Ngày Chứng Từ";
+                ViewHeader.Columns[6].Caption = "Ngày Ghi Sổ";
+                ViewHeader.Columns[7].Caption = "Người Giao";
+                ViewHeader.Columns[8].Caption = "Loại Xe";
+                ViewHeader.Columns[9].Caption = "Số Xe";
+                ViewHeader.Columns[10].Visible = false;
+                ViewHeader.Columns[11].Caption = "Mã Nhân Viên";
+                ViewHeader.Columns[12].Caption = "Trạng Thái";
+                ViewHeader.Columns[13].Caption = "Ghi Chú";
+                ViewHeader.Columns[14].Caption = "User";
 
-            RepositoryItemButtonEdit rebutton;
-            rebutton = new RepositoryItemButtonEdit();
-            rebutton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(LookupCellNo_);
-            rebutton.Buttons[0].Tag = ViewHeader;
-            rebutton.NullText = "";
-            gridHeader.RepositoryItems.Add(rebutton);
-            ViewHeader.Columns["SupplierNo_"].ColumnEdit = rebutton;
-            ViewHeader.Columns["SupplierNo_"].ColumnEdit.ReadOnly = false;
+                RepositoryItemButtonEdit rebutton;
+                rebutton = new RepositoryItemButtonEdit();
+                rebutton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(LookupCellNo_);
+                rebutton.Buttons[0].Tag = ViewHeader;
+                rebutton.NullText = "";
+                gridHeader.RepositoryItems.Add(rebutton);
+                ViewHeader.Columns["SupplierNo_"].ColumnEdit = rebutton;
+                ViewHeader.Columns["SupplierNo_"].ColumnEdit.ReadOnly = false;
 
-            RepositoryItemDateEdit riDate = new RepositoryItemDateEdit();
-            riDate.ShowClear = false;
-            riDate.ShowToday = true;
-            riDate.EditMask = "dd/MM/yyyy";
-            riDate.Mask.UseMaskAsDisplayFormat = true;
-            ViewHeader.Columns["PostingDate"].ColumnEdit = riDate;
-            ViewHeader.Columns["DocumentDate"].ColumnEdit = riDate;
-            
-            StyleFormatCondition cn;
-            System.Drawing.Color _color; 
-            
-            _color = Color.LightGray;
-            arr.Add(_color);
-            cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 1);
-            cn.Appearance.BackColor = (Color)arr[0];
-            cn.ApplyToRow = true;
-            ViewHeader.FormatConditions.Add(cn);
+                RepositoryItemDateEdit riDate = new RepositoryItemDateEdit();
+                riDate.ShowClear = false;
+                riDate.ShowToday = true;
+                riDate.EditMask = "dd/MM/yyyy";
+                riDate.Mask.UseMaskAsDisplayFormat = true;
+                ViewHeader.Columns["PostingDate"].ColumnEdit = riDate;
+                ViewHeader.Columns["DocumentDate"].ColumnEdit = riDate;
 
-            _color = Color.LightCyan;
-            arr.Add(_color);
-            cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 2);
-            cn.Appearance.BackColor = (Color)arr[1];
-            cn.ApplyToRow = true;
-            ViewHeader.FormatConditions.Add(cn);
-            
-            _color = Color.LightSeaGreen;
-            arr.Add(_color);
-            cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 3);
-            cn.Appearance.BackColor = (Color)arr[2];
-            cn.ApplyToRow = true;
-            ViewHeader.FormatConditions.Add(cn);
+                StyleFormatCondition cn;
+                System.Drawing.Color _color;
+
+                _color = Color.LightGray;
+                arr.Add(_color);
+                cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 1);
+                cn.Appearance.BackColor = (Color)arr[0];
+                cn.ApplyToRow = true;
+                ViewHeader.FormatConditions.Add(cn);
+
+                _color = Color.LightCyan;
+                arr.Add(_color);
+                cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 2);
+                cn.Appearance.BackColor = (Color)arr[1];
+                cn.ApplyToRow = true;
+                ViewHeader.FormatConditions.Add(cn);
+
+                _color = Color.LightSeaGreen;
+                arr.Add(_color);
+                cn = new StyleFormatCondition(FormatConditionEnum.Equal, ViewHeader.Columns["Status"], null, 3);
+                cn.Appearance.BackColor = (Color)arr[2];
+                cn.ApplyToRow = true;
+                ViewHeader.FormatConditions.Add(cn);
 
 
-            ViewHeader.OptionsView.ShowAutoFilterRow = true;
-            ViewHeader.OptionsView.ColumnAutoWidth = false;
-            ViewHeader.BestFitColumns();
+                ViewHeader.OptionsView.ShowAutoFilterRow = true;
+                ViewHeader.OptionsView.ColumnAutoWidth = false;
+                ViewHeader.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                 Library.Message("Lỗi: " + ex.Message, "Cảnh Báo - " + this.Text);
+            }            
         }
         private void InitGridLine()
-        { 
-            //Load TeamPlate Line PN
-            gridDetail.DataSource = JELogic.GetListByDocumentNo_("No_");
-            ViewDetail.Columns[0].Visible = false;
-            ViewDetail.Columns[1].Visible = false;
-            ViewDetail.Columns["ItemNo_"].Caption = "Mã Hàng Hóa";
-            ViewDetail.Columns["Name"].Caption = "Tên Hàng Hóa";
-            ViewDetail.Columns["Size"].Caption = "Kích Cỡ";
-            ViewDetail.Columns["LotNo_"].Caption = "Số Lô";
-            ViewDetail.Columns["CellNo_"].Caption = "Mã Vị Trí";
-            ViewDetail.Columns["Quantity"].Caption = "Số Lượng";
-            ViewDetail.Columns["Unit"].Caption = "Đơn vị tính";
-            ViewDetail.Columns["UnitPrice"].Caption = "Đơn Giá";
-            ViewDetail.Columns["VAT"].Caption = "VAT";
-            ViewDetail.Columns["LineDiscount"].Caption = "Chiết Khấu";
-            ViewDetail.Columns["QtyInPallet"].Caption= "Số Lượng/Pallet";
-            ViewDetail.Columns["NetWeight"].Caption = "Net Weight";
-            ViewDetail.Columns["TotalNet"].Caption = "Tổng N.W";
-            ViewDetail.Columns["GrossWeight"].Caption = "Gross Weight";
-            ViewDetail.Columns["TotalGross"].Caption = "Tổng G.W";
-            ViewDetail.Columns["ExpiryDate"].Caption = "Hạn Dùng";
-            ViewDetail.Columns["Description"].Caption = "Ghi Chú";
-            ViewDetail.Columns["UserID"].Caption = "User";
-       
-
-            ViewDetail.Columns["Quantity"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["Quantity"].DisplayFormat.FormatString = "###,###,###.####";
-
-            ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatString = "###,###,###.####";
-
-            ViewDetail.Columns["VAT"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["VAT"].DisplayFormat.FormatString = "###,###,###.####";
-
-            ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatString = "###,###,###.####";
+        {
+            try
+            {
+                //Load TeamPlate Line PN
+                gridDetail.DataSource = JELogic.GetListByDocumentNo_("No_");
+                ViewDetail.Columns[0].Visible = false;
+                ViewDetail.Columns[1].Visible = false;
+                ViewDetail.Columns["ItemNo_"].Caption = "Mã Hàng Hóa";
+                ViewDetail.Columns["Name"].Caption = "Tên Hàng Hóa";
+                ViewDetail.Columns["Size"].Caption = "Kích Cỡ";
+                ViewDetail.Columns["LotNo_"].Caption = "Số Lô";
+                ViewDetail.Columns["CellNo_"].Caption = "Mã Vị Trí";
+                ViewDetail.Columns["Quantity"].Caption = "Số Lượng";
+                ViewDetail.Columns["Unit"].Caption = "Đơn vị tính";
+                ViewDetail.Columns["UnitPrice"].Caption = "Đơn Giá";
+                ViewDetail.Columns["VAT"].Caption = "VAT";
+                ViewDetail.Columns["LineDiscount"].Caption = "Chiết Khấu";
+                ViewDetail.Columns["QtyInPallet"].Caption = "Số Lượng/Pallet";
+                ViewDetail.Columns["NetWeight"].Caption = "Net Weight";
+                ViewDetail.Columns["TotalNet"].Caption = "Tổng N.W";
+                ViewDetail.Columns["GrossWeight"].Caption = "Gross Weight";
+                ViewDetail.Columns["TotalGross"].Caption = "Tổng G.W";
+                ViewDetail.Columns["ExpiryDate"].Caption = "Hạn Dùng";
+                ViewDetail.Columns["Description"].Caption = "Ghi Chú";
+                ViewDetail.Columns["UserID"].Caption = "User";
 
 
-            ViewDetail.Columns["NetWeight"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["NetWeight"].DisplayFormat.FormatString = "###,###,###.####";
-            ViewDetail.Columns["TotalNet"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["TotalNet"].DisplayFormat.FormatString = "###,###,##0.####";
+                ViewDetail.Columns["Quantity"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["Quantity"].DisplayFormat.FormatString = "###,###,###.####";
 
-            ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatString = "###,###,###.####";
-            ViewDetail.Columns["TotalGross"].DisplayFormat.FormatType = FormatType.Numeric;
-            ViewDetail.Columns["TotalGross"].DisplayFormat.FormatString = "###,###,##0.####";
+                ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["UnitPrice"].DisplayFormat.FormatString = "###,###,###.####";
 
-            ViewDetail.Columns["ItemNo_"].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:###,###,###}"); 
+                ViewDetail.Columns["VAT"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["VAT"].DisplayFormat.FormatString = "###,###,###.####";
 
-            ViewDetail.OptionsView.ShowAutoFilterRow = true;
-            ViewDetail.OptionsView.ColumnAutoWidth = false;
-            ViewDetail.BestFitColumns();
+                ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["LineDiscount"].DisplayFormat.FormatString = "###,###,###.####";
+                
+                ViewDetail.Columns["NetWeight"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["NetWeight"].DisplayFormat.FormatString = "###,###,###.####";
+                ViewDetail.Columns["TotalNet"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["TotalNet"].DisplayFormat.FormatString = "###,###,##0.####";
+
+                ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["GrossWeight"].DisplayFormat.FormatString = "###,###,###.####";
+                ViewDetail.Columns["TotalGross"].DisplayFormat.FormatType = FormatType.Numeric;
+                ViewDetail.Columns["TotalGross"].DisplayFormat.FormatString = "###,###,##0.####";
+
+                ViewDetail.Columns["ItemNo_"].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:###,###,###}");
+
+                ViewDetail.OptionsView.ShowAutoFilterRow = true;
+                ViewDetail.OptionsView.ColumnAutoWidth = false;
+                ViewDetail.BestFitColumns();
+            }
+            catch (Exception ex)
+            {
+                 Library.Message("Lỗi: " + ex.Message, "Cảnh Báo - " + this.Text);
+            }          
         }
         private void LoadDataToHeader()
         {
